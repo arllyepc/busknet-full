@@ -1,0 +1,106 @@
+// Defina os breakpoints como variáveis
+$small-max: 414px;
+$medium-min: 415px;
+$medium-max: 959px;
+$large-min: 960px;
+$large-max: 1279px;
+$xlarge-min: 1280px;
+
+// Crie o mixin respond-to
+@mixin respond-to($breakpoint) {
+	@if $breakpoint == small {
+		@media (max-width: $small-max) {
+			@content;
+		}
+	} @else if $breakpoint == medium {
+		@media (min-width: $medium-min) and (max-width: $medium-max) {
+			@content;
+		}
+	} @else if $breakpoint == large {
+		@media (min-width: $large-min) and (max-width: $large-max) {
+			@content;
+		}
+	} @else if $breakpoint == xlarge {
+		@media (min-width: $xlarge-min) {
+			@content;
+		}
+	} @else {
+		@error "Invalid breakpoint: #{$breakpoint}";
+	}
+}
+
+$font-family: 'Gantari';
+$letter-spacing: -0.02em;
+/* $color: #000000; */
+
+@mixin typography(
+	$font-size,
+	$font-weight,
+	$line-height,
+	$text-transform: null,
+	$text-decoration: null
+) {
+	font-family: $font-family;
+	font-style: normal;
+	font-weight: $font-weight;
+	font-size: $font-size;
+	line-height: $line-height;
+	letter-spacing: $letter-spacing;
+	/* color: $color; */
+	text-transform: $text-transform;
+	text-decoration: $text-decoration;
+}
+
+@mixin typographyByName($name) {
+	@if $name == 'display-40' {
+		@include typography(7.6rem, 700, 7.6rem);
+	} @else if $name == 'display-30' {
+		@include typography(5.6rem, 700, 5.6rem);
+	} @else if $name == 'display-20' {
+		@include typography(4.4rem, 700, 4.4rem);
+	} @else if $name == 'display-10' {
+		@include typography(3.2rem, 700, 3.2rem);
+	} @else if $name == 'cabecalho-80' {
+		@include typography(8.8rem, 600, 8.8rem);
+	} @else if $name == 'cabecalho-70' {
+		@include typography(6.4rem, 600, 6.4rem);
+	} @else if $name == 'cabecalho-60' {
+		@include typography(4.8rem, 600, 4.8rem);
+	} @else if $name == 'cabecalho-50' {
+		@include typography(3.6rem, 600, 3.6rem);
+	} @else if $name == 'cabecalho-40' {
+		@include typography(2.8rem, 600, 2.8rem);
+	} @else if $name == 'cabecalho-30' {
+		@include typography(2rem, 600, 2rem);
+	} @else if $name == 'cabecalho-20' {
+		@include typography(1.6rem, 600, 1.6rem);
+	} @else if $name == 'cabecalho-10' {
+		@include typography(1.2rem, 600, 1.2rem, uppercase);
+	} @else if $name == 'linha-40' {
+		@include typography(2.4rem, 400, 2.4rem);
+	} @else if $name == 'linha-30' {
+		@include typography(2rem, 400, 2rem);
+	} @else if $name == 'linha-20' {
+		@include typography(1.6rem, 400, 1.6rem);
+	} @else if $name == 'linha-10' {
+		@include typography(1.2rem, 400, 1.2rem);
+	} @else if $name == 'paragrafo-40' {
+		@include typography(2.4rem, 400, 130%);
+	} @else if $name == 'paragrafo-30' {
+		@include typography(2rem, 400, 130%);
+	} @else if $name == 'paragrafo-20' {
+		@include typography(1.6rem, 400, 130%);
+	} @else if $name == 'paragrafo-10' {
+		@include typography(1.2rem, 600, 130%);
+	} @else if $name == 'botao-40' {
+		@include typography(1.6rem, 500, 1.6rem, null, underline);
+	} @else if $name == 'botao-30' {
+		@include typography(2rem, 500, 2rem);
+	} @else if $name == 'botao-20' {
+		@include typography(1.6rem, 500, 1.6rem);
+	} @else if $name == 'botao-10' {
+		@include typography(1.2rem, 500, 1.2rem, uppercase);
+	} @else {
+		@error "Tipografia não suportada: #{$name}.";
+	}
+}

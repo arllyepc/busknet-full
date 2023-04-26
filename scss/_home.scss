@@ -1,0 +1,459 @@
+.s-hero {
+	background: url(../img/splash.png) no-repeat center center;
+	background-size: cover;
+	height: 63rem;
+	position: relative;
+	width: 100%;
+
+	@include respond-to(small) {
+		background: none;
+	}
+
+	@include respond-to(medium) {
+		height: 56rem;
+	}
+	.container {
+		display: flex;
+		justify-content: space-between;
+
+		@include respond-to(small) {
+			flex-direction: column;
+			justify-content: center;
+		}
+		.left-content {
+			width: 71rem;
+			position: relative;
+			height: 63rem;
+
+			@include respond-to(medium) {
+				height: 56rem;
+			}
+
+			@include respond-to(small) {
+				display: none;
+			}
+
+			img {
+				position: absolute;
+				bottom: 0;
+
+				z-index: 999;
+
+				@include respond-to(medium) {
+					left: -5.6rem;
+				}
+
+				@include respond-to(small) {
+					left: -5.6rem;
+				}
+			}
+		}
+
+		.ornament-mobile {
+			display: none;
+			@include respond-to(small) {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+
+		.right-content {
+			max-width: 41rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			h1 {
+				@include typographyByName(cabecalho-50);
+				text-align: center;
+				margin-bottom: 2.4rem;
+
+				@include respond-to(medium) {
+					@include typographyByName(cabecalho-40);
+				}
+			}
+
+			p {
+				@include typographyByName(linha-20);
+				text-align: center;
+				margin-bottom: 2.4rem;
+			}
+
+			form {
+				margin-top: 4rem;
+				width: 100%;
+				max-width: 32rem;
+
+				@include respond-to(small) {
+					padding: 1.6rem;
+					width: 100%;
+					margin-top: 3.2rem;
+				}
+
+				.input-group {
+					display: flex;
+					flex-direction: column;
+					margin-bottom: 1rem;
+					gap: 1.2rem;
+
+					.btn {
+						&.secondary {
+							display: none;
+							@include respond-to(small) {
+								display: block;
+							}
+						}
+					}
+
+					.right-content-or {
+						display: none;
+						@include respond-to(small) {
+							display: block;
+						}
+					}
+
+					p {
+						margin: 0;
+					}
+					label {
+						margin-bottom: 0.5rem;
+					}
+					input {
+						width: 100%;
+						padding: 2rem 1.6rem;
+						border: 1px solid $preto;
+						border-radius: 0.5rem;
+						outline: none;
+						@include typographyByName(linha-20);
+
+						@include respond-to(medium) {
+							padding: 1.6rem;
+						}
+
+						@include respond-to(small) {
+							padding: 1.6rem;
+							width: 100%;
+						}
+					}
+
+					.error {
+						font-size: 1.2rem;
+						margin-top: 0.5rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+.s-operators {
+	background-color: $cinza-claro;
+	padding: 4rem 0;
+	.container {
+		display: flex;
+		align-items: center;
+
+		flex-direction: column;
+		gap: 2.4rem;
+		h2 {
+			@include typographyByName(cabecalho-50);
+		}
+
+		.s-operators__grid {
+			width: 100%;
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			row-gap: 2.4rem;
+			column-gap: 2.4rem;
+
+			@include respond-to(medium) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			@include respond-to(small) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			.s-operators__item {
+				display: flex;
+
+				justify-content: center;
+				align-items: center;
+				padding: 2rem;
+
+				/* width: 19.8rem; */
+
+				background: #ffffff;
+
+				box-shadow: 0px 0px 0.8rem rgba(0, 0, 0, 0.3);
+				border-radius: 0.4rem;
+			}
+		}
+
+		.btn-operators {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1.6rem 3.8rem;
+			gap: 1rem;
+
+			width: 19.8rem;
+			height: auto;
+
+			background: $branco-gelo;
+
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+			border-radius: 0.4rem;
+
+			@include typographyByName(botao-20);
+		}
+	}
+}
+
+.s-how {
+	margin-top: 6.4rem;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 4rem;
+
+		@include respond-to(medium) {
+			flex-direction: column;
+		}
+
+		@include respond-to(small) {
+			flex-direction: column;
+		}
+
+		.s-how__text {
+			h2 {
+				@include typographyByName(cabecalho-50);
+				margin-bottom: 1.6rem;
+				@include respond-to(medium) {
+					@include typographyByName(cabecalho-40);
+				}
+				@include respond-to(small) {
+					@include typographyByName(cabecalho-40);
+				}
+			}
+
+			p {
+				@include typographyByName(paragrafo-30);
+				@include respond-to(medium) {
+					@include typographyByName(paragrafo-20);
+				}
+
+				@include respond-to(small) {
+					@include typographyByName(paragrafo-20);
+				}
+			}
+		}
+	}
+}
+
+.s-why {
+	margin-top: 4rem;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 4rem;
+		@include respond-to(medium) {
+			flex-direction: column-reverse;
+		}
+
+		@include respond-to(small) {
+			flex-direction: column-reverse;
+		}
+
+		.s-why__text {
+			h2 {
+				@include typographyByName(cabecalho-50);
+				margin-bottom: 1.6rem;
+				@include respond-to(medium) {
+					@include typographyByName(cabecalho-40);
+				}
+				@include respond-to(small) {
+					@include typographyByName(cabecalho-40);
+				}
+			}
+
+			p {
+				@include typographyByName(paragrafo-30);
+				@include respond-to(medium) {
+					@include typographyByName(paragrafo-20);
+				}
+
+				@include respond-to(small) {
+					@include typographyByName(paragrafo-20);
+				}
+			}
+		}
+	}
+}
+
+.s-find {
+	margin-top: 4rem;
+	margin-bottom: 6.4rem;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 4rem;
+		@include respond-to(medium) {
+			flex-direction: column;
+		}
+
+		@include respond-to(small) {
+			flex-direction: column;
+		}
+
+		.s-find__text {
+			h2 {
+				@include typographyByName(cabecalho-50);
+				margin-bottom: 1.6rem;
+				@include respond-to(medium) {
+					@include typographyByName(cabecalho-40);
+				}
+				@include respond-to(small) {
+					@include typographyByName(cabecalho-40);
+				}
+			}
+
+			p {
+				@include typographyByName(paragrafo-30);
+				@include respond-to(medium) {
+					@include typographyByName(paragrafo-20);
+				}
+
+				@include respond-to(small) {
+					@include typographyByName(paragrafo-20);
+				}
+			}
+		}
+	}
+}
+
+.s-cta {
+	padding: 6.4rem 0;
+	background-color: $cinza-contorno;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	h2 {
+		@include typographyByName(cabecalho-50);
+		margin-bottom: 1.6rem;
+		text-align: center;
+		color: #fff;
+		@include respond-to(medium) {
+			@include typographyByName(cabecalho-40);
+		}
+		@include respond-to(small) {
+			@include typographyByName(cabecalho-40);
+		}
+	}
+
+	p {
+		margin-bottom: 2.4rem;
+		color: #fff;
+		max-width: 60rem;
+		text-align: center;
+		@include typographyByName(paragrafo-30);
+		@include respond-to(medium) {
+			@include typographyByName(paragrafo-20);
+		}
+
+		@include respond-to(small) {
+			@include typographyByName(paragrafo-20);
+		}
+	}
+}
+
+.s-faq {
+	margin: 6.4rem 0;
+	.container {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 4rem;
+
+		@include respond-to(medium) {
+			flex-direction: column;
+		}
+
+		@include respond-to(small) {
+			flex-direction: column;
+		}
+
+		.s-faq__text {
+			max-width: 43rem;
+			h2 {
+				@include typographyByName(cabecalho-50);
+				margin-bottom: 1.6rem;
+				@include respond-to(medium) {
+					@include typographyByName(cabecalho-40);
+				}
+				@include respond-to(small) {
+					@include typographyByName(cabecalho-40);
+				}
+			}
+
+			p {
+				@include typographyByName(paragrafo-30);
+				@include respond-to(medium) {
+					@include typographyByName(paragrafo-20);
+				}
+
+				@include respond-to(small) {
+					@include typographyByName(paragrafo-20);
+				}
+			}
+		}
+
+		.s-faq__questions {
+			width: 100%;
+			max-width: 60rem;
+			@include respond-to(medium) {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+.button-fixed {
+	position: fixed;
+	bottom: 4rem;
+	right: 4rem;
+	z-index: 999;
+	background: $laranja-0;
+	padding: 1.6rem;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		background: $laranja-1;
+	}
+
+	img {
+		width: 4rem;
+		height: 4rem;
+	}
+	@include respond-to(medium) {
+		display: none;
+		/* bottom: 2rem;
+		right: 2rem; */
+	}
+	@include respond-to(small) {
+		display: none;
+		/* bottom: 2rem;
+		right: 2rem; */
+	}
+}

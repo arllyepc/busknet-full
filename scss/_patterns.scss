@@ -1,0 +1,112 @@
+/* BOTÕES */
+
+.btn {
+	&.primary {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 1.6rem 3.8rem;
+
+		min-width: 15.6rem;
+		height: 5.6rem;
+
+		background: $laranja-0;
+
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+		border-radius: 4px;
+		color: #fff;
+
+		@include typographyByName(botao-20);
+		transition: all 0.3s ease-in;
+
+		&:hover {
+			background: $laranja-1;
+			/* Elevação */
+		}
+	}
+
+	&.secondary {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 1.6rem 3.8rem;
+
+		min-width: 15.6rem;
+		height: 5.6rem;
+
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+		border-radius: 4px;
+		color: $laranja-0;
+		border: $laranja-0 1px solid;
+
+		@include typographyByName(botao-20);
+		transition: all 0.3s ease-in;
+
+		&:hover {
+			background: $laranja-1;
+		}
+	}
+
+	&.white {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 1.6rem 3.8rem;
+
+		min-width: 15.6rem;
+		height: 5.6rem;
+		color: $laranja-0;
+
+		background: $branco-gelo;
+
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+		border-radius: 4px;
+
+		@include typographyByName(botao-20);
+		transition: all 0.3s ease-in;
+
+		&:hover {
+			background: $laranja-1;
+			color: #fff;
+		}
+	}
+}
+
+/* ACCORDION */
+
+.s-faq__accordion {
+	cursor: pointer;
+	width: 100%;
+
+	border-bottom: 1px solid #222;
+	transition: all 0.3s ease-in;
+	.s-faq__accordion-header {
+		@include typographyByName(linha-30);
+		/* border-bottom: 1px solid #222; */
+		padding: 1.6rem 2.4rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.iconify-more {
+			transition: all 0.1s ease-in;
+		}
+		&.active {
+			.iconify-more {
+				transform: rotate(45deg);
+			}
+		}
+	}
+	.s-faq__accordion-content {
+		padding: 1.6rem 2.4rem;
+		display: none;
+		@include typographyByName(paragrafo-20);
+
+		&.active {
+			display: block;
+			border-top: 1px solid #222;
+		}
+	}
+}

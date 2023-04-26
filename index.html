@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="./css/plugins.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<title>Busknet</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Gantari:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body>
+		<header>
+			<!-- Este é o container do header da versão desktop -->
+			<div class="container">
+				<div class="navbar">
+					<a href="" class="navbar__logo">
+						<img src="/img/logo-busknet.svg" alt="Logo do Busknet" />
+					</a>
+					<nav>
+						<ul class="nav-desktop__nav">
+							<li class="menu-item" id="menu-item-1">
+								<a href="" class="nav-link-desktop">Planos de internet</a>
+								<ul class="dropdown-menu" id="dropdown-item-1">
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos Claro</a>
+									</li>
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos HughesNet</a>
+									</li>
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos Oi</a>
+									</li>
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos Tim</a>
+									</li>
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos Vivo</a>
+									</li>
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos Locais</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="menu-item" id="menu-item-2">
+								<a href="" class="nav-link-desktop">Indicador</a>
+							</li>
+							<li class="menu-item" id="menu-item-3">
+								<a href="" class="nav-link-desktop">Seja um parceiro</a>
+							</li>
+							<li class="menu-item" id="menu-item-4">
+								<a href="" class="nav-link-desktop">Sobre</a>
+							</li>
+						</ul>
+					</nav>
+
+					<button class="menu-btn">
+						<div class="menu-btn__burger"></div>
+					</button>
+				</div>
+				<nav class="nav-mobile">
+					<ul class="nav-mobile__nav">
+						<li class="menu-item" id="menu-item-1">
+							<a href="" class="nav-link-desktop"
+								>Planos de internet
+								<iconify-icon
+									class="iconify-chevron"
+									icon="bi:chevron-down"
+									style="color: #fff; font-size: 2.4rem"
+								></iconify-icon
+							></a>
+							<ul class="dropdown-menu" id="dropdown-item-1">
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos Claro </a>
+								</li>
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos HughesNet</a>
+								</li>
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos Oi</a>
+								</li>
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos Tim</a>
+								</li>
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos Vivo</a>
+								</li>
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos Locais</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu-item" id="menu-item-2">
+							<a href="" class="nav-link-desktop">Indicador</a>
+						</li>
+						<li class="menu-item" id="menu-item-3">
+							<a href="" class="nav-link-desktop">Seja um parceiro</a>
+						</li>
+						<li class="menu-item" id="menu-item-4">
+							<a href="" class="nav-link-desktop">Sobre</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<section class="s-hero">
+				<div class="container">
+					<div class="left-content">
+						<img
+							src="img/man-splash.png"
+							alt="Homem com camisa amarela correndo feliz e olhando para você"
+						/>
+					</div>
+
+					<div class="ornament-mobile">
+						<img
+							src="img/ornament-mobile.png"
+							alt="Ornamento laranja da marca"
+						/>
+					</div>
+
+					<div class="right-content">
+						<h1>Encontre aqui a melhor internet para sua região!</h1>
+						<p>Compare os melhores planos de internet banda larga</p>
+
+						<form action="">
+							<!-- digite a sua cidade -->
+							<div class="input-group">
+								<input type="text" placeholder="Digite sua cidade" />
+								<button class="btn primary">Ver planos na minha região</button>
+								<p class="right-content-or">ou</p>
+								<button class="btn secondary">Usar minha localização</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+
+			<section class="s-operators">
+				<div class="container">
+					<h2>Os planos das principais operadoras</h2>
+					<div class="s-operators__grid">
+						<div class="s-operators__item">
+							<img src="img/logo-tim.svg" alt="Logo da operadora Tim" />
+						</div>
+						<div class="s-operators__item">
+							<img src="img/logo-oi.svg" alt="Logo da operadora Oi" />
+						</div>
+						<div class="s-operators__item">
+							<img src="img/logo-claro.svg" alt="Logo da operadora Claro" />
+						</div>
+						<div class="s-operators__item">
+							<img
+								src="img/logo-hughesnet.svg"
+								alt="Logo da operadora Hughesnet"
+							/>
+						</div>
+						<div class="s-operators__item">
+							<img
+								src="img/logo-americanet.svg"
+								alt="Logo da operadora Americanet"
+							/>
+						</div>
+						<div class="s-operators__item">
+							<img src="img/logo-vivo.svg" alt="Logo da operadora Vivo" />
+						</div>
+					</div>
+					<a href="#" class="btn-operators">Mais provedores</a>
+				</div>
+			</section>
+
+			<section class="s-how">
+				<div class="container">
+					<img
+						src="img/how-img.png"
+						alt="Garota segurando o notebook, expressão de dúvidas"
+					/>
+					<div class="s-how__text">
+						<h2>Como funciona o BuskNet?</h2>
+						<p>
+							O BuskNet é uma ferramenta simples e rápida para você descobrir e
+							comparar as melhores ofertas de internet na sua região. Ao inserir
+							o seu município e estado, buscamos em nossa base de dados as
+							principais fornecedoras de internet da sua região e mostramos as
+							melhores ofertas de planos para você escolher.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="s-why">
+				<div class="container">
+					<div class="s-why__text">
+						<h2>Porque utilizar o BuskNet?</h2>
+						<p>
+							Diferente de outras plataformas do ramo, o BuskNet exibe não só as
+							principais operadoras do mercado, mas também provedoras de
+							internet regionais que atendem o seu local, sempre com os preços
+							atualizados. Assim, não direcionamos você para um plano
+							específico, mas mostramos as diversas opções que estão no mercado,
+							deixando você comparar e decidir qual delas é a que se encaixa da
+							melhor maneira ao seu perfil.
+						</p>
+					</div>
+					<img
+						src="img/why-img.png"
+						alt="Mulher olhando para a tela do notebook com expressão de admiração"
+					/>
+				</div>
+			</section>
+
+			<section class="s-find">
+				<div class="container">
+					<img
+						src="img/find-img.png"
+						alt="Casal sorrindo e olhando para tela do notebook"
+					/>
+					<div class="s-find__text">
+						<h2>Encontre o melhor plano</h2>
+						<p>
+							Fazendo sua pesquisa com o BuskNet você tem a certeza que vai
+							escolher o melhor plano de internet disponível para a sua região
+							selecionada especialmente para você!
+						</p>
+						<p>Faça sua busca com o BuskNet!</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="s-cta">
+				<div class="container">
+					<h2>
+						Não sabe qual o melhor plano para você? <br />
+						Experimente nosso Indicador!
+					</h2>
+					<p>
+						Descubra o melhor plano para você com a melhor oferta para sua
+						região. Leva menos de um minuto, é rapidinho!
+					</p>
+					<a href="#" class="btn white">Indicador de planos</a>
+				</div>
+			</section>
+
+			<section class="s-faq">
+				<div class="container">
+					<div class="s-faq__text">
+						<h2>Perguntas frequentes</h2>
+						<p>
+							Confira as perguntas mais frequentes sobre o BuskNet e tire suas
+							dúvidas.
+						</p>
+					</div>
+
+					<ul class="s-faq__questions">
+						<li class="s-faq__accordion">
+							<div class="s-faq__accordion-header active">
+								<p>O que é o BuskNet?</p>
+								<iconify-icon
+									class="iconify-more"
+									icon="fluent:add-12-regular"
+									style="color: #222; font-size: 2.4rem"
+								></iconify-icon>
+							</div>
+							<div class="s-faq__accordion-content">
+								<p>
+									O BuskNet é uma plataforma que permite ao usuário pesquisar e
+									comparar os mais diversos planos de internet residencial
+									disponíveis. Também indicamos a melhor opção de plano
+									personalizada para cada usuário com base num perfil que
+									identificamos.
+								</p>
+							</div>
+						</li>
+						<li class="s-faq__accordion">
+							<div class="s-faq__accordion-header">
+								<p>Quais operadoras estão disponíveis no BuskNet?</p>
+								<iconify-icon
+									class="iconify-more"
+									icon="fluent:add-12-regular"
+									style="color: #222; font-size: 2.4rem"
+								></iconify-icon>
+							</div>
+							<div class="s-faq__accordion-content">
+								<p>
+									Nossa seleção atual conta tanto com as principais operadoras
+									do mercado (Claro, Oi, TIM, Vivo, HughesNet) quanto com
+									provedores de internet menores específicos de cada região.
+								</p>
+							</div>
+						</li>
+						<li class="s-faq__accordion">
+							<div class="s-faq__accordion-header">
+								<p>O BuskNet é confiável?</p>
+								<iconify-icon
+									class="iconify-more"
+									icon="fluent:add-12-regular"
+									style="color: #222; font-size: 2.4rem"
+								></iconify-icon>
+							</div>
+							<div class="s-faq__accordion-content">
+								<p>
+									Sim! O foco da nossa equipe sempre será trazer a melhor
+									seleção de planos atualizada para cada usuário com base no
+									perfil do mesmo.
+								</p>
+							</div>
+						</li>
+						<li class="s-faq__accordion">
+							<div class="s-faq__accordion-header">
+								<p>Como usar o Indicador?</p>
+								<iconify-icon
+									class="iconify-more"
+									icon="fluent:add-12-regular"
+									style="color: #222; font-size: 2.4rem"
+								></iconify-icon>
+							</div>
+							<div class="s-faq__accordion-content">
+								<p>
+									Clique na seção “Indicador” no topo da página e responda
+									algumas perguntas relacionadas ao seu consumo de internet e
+									interesses para que identifiquemos o seu perfil e assim
+									possamos recomendar o melhor plano para você!
+								</p>
+							</div>
+						</li>
+						<li class="s-faq__accordion">
+							<div class="s-faq__accordion-header">
+								<p>Como consultar minha cobertura?</p>
+								<iconify-icon
+									class="iconify-more"
+									icon="fluent:add-12-regular"
+									style="color: #222; font-size: 2.4rem"
+								></iconify-icon>
+							</div>
+							<div class="s-faq__accordion-content">
+								<p>
+									Preencha os campos no topo da página com a sua cidade e estado
+									depois clique em “Ver planos na minha região”. Agora o BuskNet
+									irá mostrar as principais fornecedoras de internet que cobrem
+									a sua região para que você possa comparar e escolher o melhor
+									plano que encaixe no seu bolso!
+								</p>
+							</div>
+						</li>
+						<li class="s-faq__accordion">
+							<div class="s-faq__accordion-header">
+								<p>O BuskNet é pago?</p>
+								<iconify-icon
+									class="iconify-more"
+									icon="fluent:add-12-regular"
+									style="color: #222; font-size: 2.4rem"
+								></iconify-icon>
+							</div>
+							<div class="s-faq__accordion-content">
+								<p>
+									Não! Nossas ferramentas são de uso gratuito para todos os
+									usuários.
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="container">
+				<div class="footer__left">
+					<div class="footer__logo__socials">
+						<div class="footer__logo">
+							<a href="#">
+								<img
+									src="img/logo-busknet-white.svg"
+									alt="Logo do BuskNet monocromático branco"
+								/>
+							</a>
+						</div>
+
+						<div class="footer__left__socials">
+							<p>Siga o Busknet</p>
+							<span
+								><a href="https://www.facebook.com/busknet" target="_blank">
+									<iconify-icon
+										class="iconify-facebook"
+										icon="ri:facebook-fill"
+										style="color: #fff; font-size: 2.4rem"
+									></iconify-icon>
+								</a>
+								<a href="https://www.instagram.com/busknet/" target="_blank">
+									<iconify-icon
+										class="iconify-instagram"
+										icon="ri:instagram-line"
+										style="color: #fff; font-size: 2.4rem"
+									></iconify-icon> </a
+							></span>
+						</div>
+					</div>
+					<nav class="footer__left__nav">
+						<h3>Operadoras</h3>
+						<ul>
+							<li><a href="#">Planos de internet Claro</a></li>
+							<li><a href="#">Planos de internet HughesNet</a></li>
+							<li><a href="#">Planos de internet Oi</a></li>
+							<li><a href="#">Planos de internet Americanet</a></li>
+							<li><a href="#">Planos de internet Tim Live</a></li>
+							<li><a href="#">Planos de internet Vivo Fibra</a></li>
+							<li><a href="#">Planos de internet outras operadoras</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__right">
+					<nav class="footer__right__nav">
+						<h3>O Busknet</h3>
+						<ul>
+							<li><a href="#">Indicador</a></li>
+							<li><a href="#">Seja um parceiro</a></li>
+							<li><a href="#">Sobre nós</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</footer>
+		<div class="button-fixed">
+			<a href="#"><img src="img/icon-message.svg" alt="ícone de mensagem" /></a>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/all.js"></script>
+	</body>
+</html>
