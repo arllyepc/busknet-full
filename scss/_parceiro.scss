@@ -1,0 +1,116 @@
+.s-partner-intro {
+  @include respond-to(small) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    @include respond-to(small) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    @include respond-to(medium) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    .s-partner-intro__text {
+      max-width: 54.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+
+      h2 {
+        @include typographyByName(cabecalho-50);
+        @include respond-to(small) {
+          @include typographyByName(cabecalho-40);
+        }
+      }
+
+      p {
+        @include typographyByName(paragrafo-30);
+        @include respond-to(small) {
+          @include typographyByName(paragrafo-20);
+        }
+      }
+    }
+  }
+}
+
+.s-partner-why {
+  margin: 6.4rem 0;
+  width: 100%;
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.4rem;
+    h2 {
+      text-align: center;
+      @include typographyByName(cabecalho-50);
+
+      @include typographyByName(cabecalho-40);
+    }
+    .s-partner-why__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      @include respond-to(medium) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include respond-to(small) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+.s-partner-cta {
+  margin: 6.4rem 0;
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 2.4rem;
+    flex-direction: column;
+
+    .btn {
+      max-width: 50%;
+      text-align: center;
+      align-self: center;
+      margin-top: 2.4rem;
+
+      @include respond-to(small) {
+        max-width: 100%;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      @include typographyByName(cabecalho-50);
+      @include respond-to(small) {
+        @include typographyByName(cabecalho-40);
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      @include typographyByName(paragrafo-30);
+      @include respond-to(small) {
+        @include typographyByName(paragrafo-20);
+      }
+    }
+  }
+}
+
+

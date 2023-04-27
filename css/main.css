@@ -200,6 +200,46 @@ a:visited {
   margin-bottom: -0.3rem;
 }
 
+/* CARDS */
+.s-partner-why__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 1.2rem;
+  width: 31.2rem;
+}
+@media (max-width: 414px) {
+  .s-partner-why__card {
+    width: 100%;
+  }
+}
+.s-partner-why__card .card-icon {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+}
+.s-partner-why__card .card-title {
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+  text-align: center;
+}
+.s-partner-why__card .card-description {
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+  text-align: center;
+}
+
 header {
   height: 9rem;
   position: sticky;
@@ -1342,59 +1382,62 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
   }
 }
 
-main {
+.main-indicator {
   height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 414px) {
-  main {
+  .main-indicator {
     height: auto;
     padding: 4rem 0;
   }
 }
 @media (min-width: 415px) and (max-width: 959px) {
-  main {
+  .main-indicator {
     height: auto;
     padding: 4rem 0;
   }
 }
-main .s-indicator-content {
+.main-indicator .s-indicator-content {
   height: 100%;
   display: flex;
   align-items: center;
 }
 @media (max-width: 414px) {
-  main .s-indicator-content {
+  .main-indicator .s-indicator-content {
     flex-direction: column;
     justify-content: center;
     gap: 4rem;
   }
 }
-main .s-indicator-content .container {
+.main-indicator .s-indicator-content .container {
   display: flex;
   align-items: center;
   gap: 4rem;
 }
 @media (max-width: 414px) {
-  main .s-indicator-content .container {
+  .main-indicator .s-indicator-content .container {
     flex-direction: column;
     justify-content: center;
     gap: 4rem;
   }
 }
 @media (min-width: 415px) and (max-width: 959px) {
-  main .s-indicator-content .container {
+  .main-indicator .s-indicator-content .container {
     flex-direction: column;
     justify-content: center;
     gap: 4rem;
   }
 }
-main .s-indicator-content .container .s-indicator-content__text {
+.main-indicator .s-indicator-content .container .s-indicator-content__text {
   max-width: 54.6rem;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
 }
-main .s-indicator-content .container .s-indicator-content__text h2 {
+.main-indicator .s-indicator-content .container .s-indicator-content__text h2 {
   font-family: "Gantari";
   font-style: normal;
   font-weight: 600;
@@ -1404,7 +1447,7 @@ main .s-indicator-content .container .s-indicator-content__text h2 {
   /* color: $color; */
 }
 @media (max-width: 414px) {
-  main .s-indicator-content .container .s-indicator-content__text h2 {
+  .main-indicator .s-indicator-content .container .s-indicator-content__text h2 {
     font-family: "Gantari";
     font-style: normal;
     font-weight: 600;
@@ -1414,7 +1457,7 @@ main .s-indicator-content .container .s-indicator-content__text h2 {
     /* color: $color; */
   }
 }
-main .s-indicator-content .container .s-indicator-content__text p {
+.main-indicator .s-indicator-content .container .s-indicator-content__text p {
   font-family: "Gantari";
   font-style: normal;
   font-weight: 400;
@@ -1424,7 +1467,187 @@ main .s-indicator-content .container .s-indicator-content__text p {
   /* color: $color; */
 }
 @media (max-width: 414px) {
-  main .s-indicator-content .container .s-indicator-content__text p {
+  .main-indicator .s-indicator-content .container .s-indicator-content__text p {
+    font-family: "Gantari";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    /* color: $color; */
+  }
+}
+
+@media (max-width: 414px) {
+  .s-partner-intro {
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+  }
+}
+.s-partner-intro .container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+@media (max-width: 414px) {
+  .s-partner-intro .container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+  }
+}
+@media (min-width: 415px) and (max-width: 959px) {
+  .s-partner-intro .container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+  }
+}
+.s-partner-intro .container .s-partner-intro__text {
+  max-width: 54.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.s-partner-intro .container .s-partner-intro__text h2 {
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.6rem;
+  line-height: 3.6rem;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+}
+@media (max-width: 414px) {
+  .s-partner-intro .container .s-partner-intro__text h2 {
+    font-family: "Gantari";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    letter-spacing: -0.02em;
+    /* color: $color; */
+  }
+}
+.s-partner-intro .container .s-partner-intro__text p {
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+}
+@media (max-width: 414px) {
+  .s-partner-intro .container .s-partner-intro__text p {
+    font-family: "Gantari";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    /* color: $color; */
+  }
+}
+
+.s-partner-why {
+  margin: 6.4rem 0;
+  width: 100%;
+}
+.s-partner-why .container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.s-partner-why .container h2 {
+  text-align: center;
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.6rem;
+  line-height: 3.6rem;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+}
+.s-partner-why .container .s-partner-why__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (min-width: 415px) and (max-width: 959px) {
+  .s-partner-why .container .s-partner-why__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 414px) {
+  .s-partner-why .container .s-partner-why__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.s-partner-cta {
+  margin: 6.4rem 0;
+}
+.s-partner-cta .container {
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+  flex-direction: column;
+}
+.s-partner-cta .container .btn {
+  max-width: 50%;
+  text-align: center;
+  align-self: center;
+  margin-top: 2.4rem;
+}
+@media (max-width: 414px) {
+  .s-partner-cta .container .btn {
+    max-width: 100%;
+  }
+}
+.s-partner-cta .container h2 {
+  text-align: center;
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.6rem;
+  line-height: 3.6rem;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+}
+@media (max-width: 414px) {
+  .s-partner-cta .container h2 {
+    font-family: "Gantari";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    letter-spacing: -0.02em;
+    /* color: $color; */
+  }
+}
+.s-partner-cta .container img {
+  width: 100%;
+}
+.s-partner-cta .container p {
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+}
+@media (max-width: 414px) {
+  .s-partner-cta .container p {
     font-family: "Gantari";
     font-style: normal;
     font-weight: 400;

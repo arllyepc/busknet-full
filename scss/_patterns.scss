@@ -1,140 +1,171 @@
 /* BOTÕES */
 
 .btn {
-	&.primary {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		padding: 1.6rem 3.8rem;
+  &.primary {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem 3.8rem;
 
-		min-width: 15.6rem;
-		height: 5.6rem;
+    min-width: 15.6rem;
+    height: 5.6rem;
 
-		background: $laranja-0;
+    background: $laranja-0;
 
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-		border-radius: 4px;
-		color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    color: #fff;
 
-		@include typographyByName(botao-20);
-		transition: all 0.3s ease-in;
+    @include typographyByName(botao-20);
+    transition: all 0.3s ease-in;
 
-		&:hover {
-			background: $laranja-1;
-			/* Elevação */
-		}
-	}
+    &:hover {
+      background: $laranja-1;
+      /* Elevação */
+    }
+  }
 
-	&.secondary {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		padding: 1.6rem 3.8rem;
+  &.secondary {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem 3.8rem;
 
-		min-width: 15.6rem;
-		height: 5.6rem;
+    min-width: 15.6rem;
+    height: 5.6rem;
 
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-		border-radius: 4px;
-		color: $laranja-0;
-		border: $laranja-0 1px solid;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    color: $laranja-0;
+    border: $laranja-0 1px solid;
 
-		@include typographyByName(botao-20);
-		transition: all 0.3s ease-in;
+    @include typographyByName(botao-20);
+    transition: all 0.3s ease-in;
 
-		&:hover {
-			background: $laranja-1;
-		}
-	}
+    &:hover {
+      background: $laranja-1;
+    }
+  }
 
-	&.white {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		padding: 1.6rem 3.8rem;
+  &.white {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem 3.8rem;
 
-		min-width: 15.6rem;
-		height: 5.6rem;
-		color: $laranja-0;
+    min-width: 15.6rem;
+    height: 5.6rem;
+    color: $laranja-0;
 
-		background: $branco-gelo;
+    background: $branco-gelo;
 
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-		border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
 
-		@include typographyByName(botao-20);
-		transition: all 0.3s ease-in;
+    @include typographyByName(botao-20);
+    transition: all 0.3s ease-in;
 
-		&:hover {
-			background: $laranja-1;
-			color: #fff;
-		}
-	}
+    &:hover {
+      background: $laranja-1;
+      color: #fff;
+    }
+  }
 }
 
 /* ACCORDION */
 
 .s-faq__accordion {
-	cursor: pointer;
-	width: 100%;
+  cursor: pointer;
+  width: 100%;
 
-	border-bottom: 1px solid #222;
-	transition: all 0.3s ease-in;
-	.s-faq__accordion-header {
-		@include typographyByName(linha-30);
-		/* border-bottom: 1px solid #222; */
-		padding: 1.6rem 2.4rem;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		.iconify-more {
-			transition: all 0.1s ease-in;
-		}
-		&.active {
-			.iconify-more {
-				transform: rotate(45deg);
-			}
-		}
-	}
-	.s-faq__accordion-content {
-		padding: 1.6rem 2.4rem;
-		display: none;
-		@include typographyByName(paragrafo-20);
+  border-bottom: 1px solid #222;
+  transition: all 0.3s ease-in;
+  .s-faq__accordion-header {
+    @include typographyByName(linha-30);
+    /* border-bottom: 1px solid #222; */
+    padding: 1.6rem 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .iconify-more {
+      transition: all 0.1s ease-in;
+    }
+    &.active {
+      .iconify-more {
+        transform: rotate(45deg);
+      }
+    }
+  }
+  .s-faq__accordion-content {
+    padding: 1.6rem 2.4rem;
+    display: none;
+    @include typographyByName(paragrafo-20);
 
-		&.active {
-			display: block;
-			border-top: 1px solid #222;
-		}
-	}
+    &.active {
+      display: block;
+      border-top: 1px solid #222;
+    }
+  }
 }
 
 /* BREADCRUMBS */
 
 .breadcrumb {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	gap: 0.8rem;
-	height: 6.4rem;
-	.breadcrumb-item {
-		@include typographyByName(botao-20);
-		a {
-			display: inline-block;
-			color: $cinza-contorno;
-		}
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  height: 6.4rem;
+  .breadcrumb-item {
+    @include typographyByName(botao-20);
+    a {
+      display: inline-block;
+      color: $cinza-contorno;
+    }
 
-		&.active {
-			a {
-				color: $preto;
-			}
-		}
-	}
+    &.active {
+      a {
+        color: $preto;
+      }
+    }
+  }
 
-	.breadcrumb-icon {
-		font-size: 1.6rem;
-		margin-bottom: -0.3rem;
-	}
+  .breadcrumb-icon {
+    font-size: 1.6rem;
+    margin-bottom: -0.3rem;
+  }
+}
+
+/* CARDS */
+
+.s-partner-why__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 1.2rem;
+  width: 31.2rem;
+
+  @include respond-to(small) {
+    width: 100%;
+  }
+
+  .card-icon {
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+  }
+  .card-title {
+    @include typographyByName(cabecalho-40);
+    text-align: center;
+	
+  }
+
+  .card-description {
+    @include typographyByName(paragrafo-20);
+    text-align: center;
+  }
 }
