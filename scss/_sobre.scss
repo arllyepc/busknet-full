@@ -1,0 +1,155 @@
+.s-about-intro {
+	margin: 6.4rem 0;
+	@include respond-to(small) {
+		margin: 4rem 0;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		@include respond-to(small) {
+			flex-direction: column;
+		}
+
+		.s-about-intro__title-img {
+			max-width: 91rem;
+			text-align: center;
+			h2 {
+				@include typographyByName(cabecalho-50);
+				margin-bottom: 2.4rem;
+				@include respond-to(medium) {
+					@include typographyByName(cabecalho-40);
+				}
+
+				@include respond-to(small) {
+					@include typographyByName(cabecalho-40);
+				}
+			}
+		}
+		.s-about-intro__text {
+			margin-top: 4rem;
+			@include typographyByName(paragrafo-30);
+			@include respond-to(small) {
+				@include typographyByName(paragrafo-20);
+			}
+		}
+	}
+}
+
+.s-about-cta {
+	margin-top: 4rem;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 4rem;
+		@include respond-to(medium) {
+			flex-direction: column-reverse;
+		}
+
+		@include respond-to(small) {
+			flex-direction: column-reverse;
+		}
+
+		.s-about-cta__text {
+			margin-bottom: 4rem;
+			h2 {
+				@include typographyByName(cabecalho-50);
+				margin-bottom: 1.6rem;
+				@include respond-to(medium) {
+					@include typographyByName(cabecalho-40);
+				}
+				@include respond-to(small) {
+					@include typographyByName(cabecalho-40);
+				}
+			}
+
+			p {
+				@include typographyByName(paragrafo-30);
+				@include respond-to(medium) {
+					@include typographyByName(paragrafo-20);
+				}
+
+				@include respond-to(small) {
+					@include typographyByName(paragrafo-20);
+				}
+			}
+		}
+	}
+}
+
+.s-about-cta__buttons {
+	margin: 6.4rem 0;
+	@include respond-to(small) {
+		margin: 4rem 0;
+	}
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+		flex-direction: column;
+		h2 {
+			@include typographyByName(cabecalho-50);
+			margin-bottom: 1.6rem;
+
+			@include respond-to(small) {
+				@include typographyByName(cabecalho-40);
+			}
+		}
+		.s-about-cta__buttons-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 2rem;
+			flex-direction: row;
+			@include respond-to(small) {
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+.s-about-contact {
+	padding: 6.4rem 0;
+	background-color: $cinza-claro;
+	@include respond-to(small) {
+		padding: 4rem 0;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2.4rem;
+
+		h2 {
+			@include typographyByName(cabecalho-50);
+			margin-bottom: 2.4rem;
+			@include respond-to(medium) {
+				@include typographyByName(cabecalho-40);
+			}
+
+			@include respond-to(small) {
+				@include typographyByName(cabecalho-40);
+			}
+		}
+
+		.s-about-contact__details {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 4rem;
+			@include respond-to(small) {
+				flex-direction: column;
+			}
+			h3 {
+				@include typographyByName(cabecalho-30);
+			}
+		}
+	}
+}
