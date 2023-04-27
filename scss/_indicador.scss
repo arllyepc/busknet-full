@@ -1,0 +1,63 @@
+main {
+	height: 80vh;
+
+	@include respond-to(small) {
+		height: auto;
+		padding: 4rem 0;
+	}
+
+	@include respond-to(medium) {
+		height: auto;
+		padding: 4rem 0;
+	}
+
+	.s-indicator-content {
+		height: 100%;
+		display: flex;
+		align-items: center;
+
+		@include respond-to(small) {
+			flex-direction: column;
+			justify-content: center;
+			gap: 4rem;
+		}
+		.container {
+			display: flex;
+			align-items: center;
+			gap: 4rem;
+
+			@include respond-to(small) {
+				flex-direction: column;
+				justify-content: center;
+				gap: 4rem;
+			}
+
+			@include respond-to(medium) {
+				flex-direction: column;
+				justify-content: center;
+				gap: 4rem;
+			}
+
+			.s-indicator-content__text {
+				max-width: 54.6rem;
+				display: flex;
+				flex-direction: column;
+				gap: 1.6rem;
+
+				h2 {
+					@include typographyByName(cabecalho-50);
+					@include respond-to(small) {
+						@include typographyByName(cabecalho-40);
+					}
+				}
+
+				p {
+					@include typographyByName(paragrafo-30);
+					@include respond-to(small) {
+						@include typographyByName(paragrafo-20);
+					}
+				}
+			}
+		}
+	}
+}

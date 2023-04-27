@@ -110,3 +110,31 @@
 		}
 	}
 }
+
+/* BREADCRUMBS */
+
+.breadcrumb {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0.8rem;
+	height: 6.4rem;
+	.breadcrumb-item {
+		@include typographyByName(botao-20);
+		a {
+			display: inline-block;
+			color: $cinza-contorno;
+		}
+
+		&.active {
+			a {
+				color: $preto;
+			}
+		}
+	}
+
+	.breadcrumb-icon {
+		font-size: 1.6rem;
+		margin-bottom: -0.3rem;
+	}
+}
