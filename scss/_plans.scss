@@ -1,0 +1,80 @@
+.s-plans-cta {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6.4rem 3rem;
+    border-radius: 0.4rem;
+
+    @include respond-to(small) {
+      padding: 2.4rem 1.6rem;
+    }
+
+    &.hughesnet {
+      background-color: #0091c4;
+    }
+
+    .s-plans-cta__logo {
+      @include respond-to(small) {
+        max-width: 12rem;
+      }
+    }
+
+    .s-plans-cta__btn {
+      color: $preto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.6rem 3.8rem;
+      gap: 1rem;
+      width: 19.4rem;
+      height: 5.6rem;
+      background: #fcfcfc;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      @include typographyByName(botao-20);
+
+      @include respond-to(small) {
+        width: fit-content;
+      }
+
+      .call-text {
+        @include respond-to(small) {
+          border: 0;
+          clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+          clip: rect(1px, 1px, 1px, 1px);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+        }
+      }
+
+      .call-icon {
+        font-size: 2.4rem;
+      }
+    }
+  }
+}
+
+.s-plans-by-city {
+  padding: 6.4rem 0;
+  .container {
+    h2 {
+      @include typographyByName(cabecalho-50);
+      margin-bottom: 1.2rem;
+    }
+
+    h3 {
+      @include typographyByName(linha-30);
+      .s-plans-by-city__change {
+        color: $laranja-0;
+        &:hover {
+          color: $laranja-1;
+        }
+      }
+    }
+  }
+}
