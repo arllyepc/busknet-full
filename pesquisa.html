@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="./css/plugins.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<title>Busknet</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Gantari:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<!-- Início da barra de navegação da versão desktop -->
+				<div class="navbar">
+					<a href="" class="navbar__logo">
+						<img src="/img/logo-busknet.svg" alt="Logo do Busknet" />
+					</a>
+					<nav>
+						<ul class="nav-desktop__nav">
+							<li class="menu-item" id="menu-item-1">
+								<a href="" class="nav-link-desktop">Planos de internet</a>
+								<ul class="dropdown-menu" id="dropdown-item-1">
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos Claro</a>
+									</li>
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos HughesNet</a>
+									</li>
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos Oi</a>
+									</li>
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos Tim</a>
+									</li>
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos Vivo</a>
+									</li>
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos Locais</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="menu-item" id="menu-item-2">
+								<a href="" class="nav-link-desktop">Indicador</a>
+							</li>
+							<li class="menu-item" id="menu-item-3">
+								<a href="" class="nav-link-desktop">Seja um parceiro</a>
+							</li>
+							<li class="menu-item" id="menu-item-4">
+								<a href="" class="nav-link-desktop">Sobre</a>
+							</li>
+						</ul>
+					</nav>
+
+					<button class="menu-btn">
+						<div class="menu-btn__burger"></div>
+					</button>
+				</div>
+				<!-- Fim da barra de navegação da versão desktop -->
+				<!-- Início da barra de navegação da versão responsiva -->
+				<nav class="nav-mobile">
+					<ul class="nav-mobile__nav">
+						<li class="menu-item" id="menu-item-1">
+							<a href="" class="nav-link-desktop"
+								>Planos de internet
+								<iconify-icon
+									class="iconify-chevron"
+									icon="bi:chevron-down"
+									style="color: #fff; font-size: 2.4rem"
+								></iconify-icon
+							></a>
+							<ul class="dropdown-menu" id="dropdown-item-1">
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos Claro </a>
+								</li>
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos HughesNet</a>
+								</li>
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos Oi</a>
+								</li>
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos Tim</a>
+								</li>
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos Vivo</a>
+								</li>
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos Locais</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu-item" id="menu-item-2">
+							<a href="" class="nav-link-desktop">Indicador</a>
+						</li>
+						<li class="menu-item" id="menu-item-3">
+							<a href="" class="nav-link-desktop">Seja um parceiro</a>
+						</li>
+						<li class="menu-item" id="menu-item-4">
+							<a href="" class="nav-link-desktop">Sobre</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- Fim da barra de navegação da versão responsiva -->
+			</div>
+		</header>
+		<!--  início dos breadcrumbs da Página -->
+		<nav aria-label="Breadcrumb">
+			<div class="container">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a href="#">Página Inicial</a>
+					</li>
+					<li class="breadcrumb-icon">
+						<iconify-icon class="iconify-chevron" icon="bi:chevron-right">
+						</iconify-icon>
+					</li>
+					<li class="breadcrumb-item active">
+						<a href="#">Resultados da pesquisa</a>
+					</li>
+				</ol>
+			</div>
+		</nav>
+		<!--  fim dos breadcrumbs da Página -->
+		<main class="main-search">
+			<section class="s-search-cta">
+				<div class="container">
+					<h2>Internet banda larga</h2>
+					<p>
+						Use nosso comaparador para procurar o melhor plano de internet para
+						você
+					</p>
+					<form action="">
+						<!-- digite a sua cidade -->
+						<div class="input-group">
+							<input type="text" placeholder="Digite sua cidade" />
+							<button class="btn primary" id="btn-search-plans">
+								Pesquisar planos
+							</button>
+						</div>
+					</form>
+				</div>
+			</section>
+			<section class="s-search-results">
+				<div class="container">
+					<div class="s-search-results__filter-price">
+						<h3>
+							Resultados para internet em
+							<span class="filter-price__city">Catalão</span> em
+							<span class="filter-price__state">Goiás</span>
+						</h3>
+						<div class="filter-price__results-filter-price">
+							<p class="results-filter-price__results">
+								13 resultados ordenados por
+							</p>
+
+							<button class="results-filter-price__btn">Menor preço</button>
+							<div class="results-filter-price__others">
+								<div class="others-group-price">
+									<button class="others-group__btn" id="price-lowest">
+										Menor preço
+									</button>
+									<button class="others-group__btn" id="price-highest">
+										Maior preço
+									</button>
+								</div>
+								<div class="others-group-velocity">
+									<button class="others-group__btn" id="price-lowest">
+										Menor velocidade
+									</button>
+									<button class="others-group__btn" id="price-highest">
+										Maior velocidade
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="s-search-results__results">
+				<div class="container">
+					<aside></aside>
+
+					<div class="s-search-results__cards">
+						<div class="s-search-results__card">
+							<div class="card__featured active">
+								<p>Este é o plano que indicamos para você</p>
+							</div>
+
+							<div class="card__content">
+								<div class="content__header">
+									<div class="header__title">Claro Net 350 Mega</div>
+									<div class="header__tag">
+										<iconify-icon class="iconify" icon="ic:round-check">
+										</iconify-icon>
+										<p>Cobertura disponível</p>
+									</div>
+								</div>
+
+								<div class="content__body">
+									<div class="body__details">
+										<div class="details-left"></div>
+
+										<div class="details-right"></div>
+									</div>
+									<div class="body__tags"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="s-cta">
+				<div class="container">
+					<h2>
+						Não sabe qual o melhor plano para você? <br />
+						Experimente nosso Indicador!
+					</h2>
+					<p>
+						Descubra o melhor plano para você com a melhor oferta para sua
+						região. Leva menos de um minuto, é rapidinho!
+					</p>
+					<a href="#" class="btn white">Indicador de planos</a>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="container">
+				<div class="footer__left">
+					<div class="footer__logo__socials">
+						<div class="footer__logo">
+							<a href="#">
+								<img
+									src="img/logo-busknet-white.svg"
+									alt="Logo do BuskNet monocromático branco"
+								/>
+							</a>
+						</div>
+
+						<div class="footer__left__socials">
+							<p>Siga o Busknet</p>
+							<span
+								><a href="https://www.facebook.com/busknet" target="_blank">
+									<iconify-icon
+										class="iconify-facebook"
+										icon="ri:facebook-fill"
+										style="color: #fff; font-size: 2.4rem"
+									></iconify-icon>
+								</a>
+								<a href="https://www.instagram.com/busknet/" target="_blank">
+									<iconify-icon
+										class="iconify-instagram"
+										icon="ri:instagram-line"
+										style="color: #fff; font-size: 2.4rem"
+									></iconify-icon> </a
+							></span>
+						</div>
+					</div>
+					<nav class="footer__left__nav">
+						<h3>Operadoras</h3>
+						<ul>
+							<li><a href="#">Planos de internet Claro</a></li>
+							<li><a href="#">Planos de internet HughesNet</a></li>
+							<li><a href="#">Planos de internet Oi</a></li>
+							<li><a href="#">Planos de internet Americanet</a></li>
+							<li><a href="#">Planos de internet Tim Live</a></li>
+							<li><a href="#">Planos de internet Vivo Fibra</a></li>
+							<li><a href="#">Planos de internet outras operadoras</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__right">
+					<nav class="footer__right__nav">
+						<h3>O Busknet</h3>
+						<ul>
+							<li><a href="#">Indicador</a></li>
+							<li><a href="#">Seja um parceiro</a></li>
+							<li><a href="#">Sobre nós</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</footer>
+		<!-- Início do botão fixo de mensagem -->
+		<div class="button-fixed">
+			<a href="#"><img src="img/icon-message.svg" alt="ícone de mensagem" /></a>
+		</div>
+		<!-- Fim do botão fixo de mensagem -->
+
+		<!-- Início do modal de pesquisa de planos -->
+		<div class="modal-searching-plan" id="modal-searching-plan">
+			<div class="modal-searching-plan__content">
+				<div class="modal-searching-plan__content__header">
+					<img src="img/logo-busknet.svg" alt="Logo do Busknet" />
+					<h2>Estamos buscando os planos ideais para você...</h2>
+				</div>
+				<div class="modal-searching-plan__content__body">
+					<div class="modal-searching-plan__content__body__loader">
+						<div class="loader"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Fim do modal de pesquisa de planos -->
+
+		<!-- Scripts fundamentais para o funcionamento da página-->
+		<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/all.js"></script>
+	</body>
+</html>

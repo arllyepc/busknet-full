@@ -1,0 +1,213 @@
+.main-search {
+	.s-search-cta {
+		background: $cinza-claro;
+		padding: 4rem 0;
+
+		.container {
+			h2 {
+				@include typographyByName(cabecalho-50);
+				margin-bottom: 1.2rem;
+			}
+
+			p {
+				@include typographyByName(paragrafo-20);
+				margin-bottom: 2.4rem;
+			}
+
+			form {
+				.input-group {
+					display: flex;
+					gap: 1.2rem;
+					input {
+						height: 5.6rem;
+						width: fit-content;
+						padding: 2rem 1.6rem;
+						border: 1px solid $preto;
+						border-radius: 0.5rem;
+						outline: none;
+						@include typographyByName(linha-20);
+
+						@include respond-to(medium) {
+							padding: 1.6rem;
+						}
+
+						@include respond-to(small) {
+							padding: 1.6rem;
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.s-search-results {
+	.container {
+		padding: 3.2rem 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		.s-search-results__filter-price {
+			h3 {
+				@include typographyByName(cabecalho-50);
+				margin-bottom: 1.2rem;
+				span {
+					color: $laranja-0;
+				}
+			}
+
+			.filter-price__results-filter-price {
+				display: flex;
+
+				gap: 1.2rem;
+				flex-direction: column;
+				.results-filter-price__results {
+					@include typographyByName(linha-30);
+					color: $laranja-1;
+				}
+
+				.results-filter-price__btn {
+					display: flex;
+					width: fit-content;
+					align-items: center;
+					padding: 0.8rem 1.6rem;
+					border: 1px solid $laranja-0;
+					border-radius: 0.4rem;
+					color: $laranja-0;
+					transition: all 0.3s ease-in-out;
+					&:hover {
+						background-color: $laranja-5-claro;
+					}
+				}
+
+				.results-filter-price__others {
+					display: none;
+
+					&.active {
+						display: flex;
+
+						gap: 1.2rem;
+					}
+
+					.others-group-price {
+						display: flex;
+						gap: 1.2rem;
+
+						.others-group__btn {
+							display: flex;
+							width: fit-content;
+							align-items: center;
+							padding: 0.8rem 1.6rem;
+							border: 1px solid $laranja-0;
+							border-radius: 0.4rem;
+							color: $laranja-0;
+							transition: all 0.3s ease-in-out;
+							&:hover {
+								background-color: $laranja-5-claro;
+							}
+
+							&.active {
+								color: #fff;
+								background: $laranja-0;
+								&:hover {
+									background: $laranja-1;
+								}
+							}
+						}
+					}
+
+					.others-group-velocity {
+						display: flex;
+						gap: 1.2rem;
+						.others-group__btn {
+							display: flex;
+							width: fit-content;
+							align-items: center;
+							padding: 0.8rem 1.6rem;
+							border: 1px solid $laranja-0;
+							border-radius: 0.4rem;
+							color: $laranja-0;
+							transition: all 0.3s ease-in-out;
+							&:hover {
+								background-color: $laranja-5-claro;
+							}
+							&.active {
+								color: #fff;
+								background: $laranja-0;
+								&:hover {
+									background: $laranja-1;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.s-search-results__results {
+	.container {
+		display: flex;
+		gap: 2.4rem;
+		aside {
+			background-color: aqua;
+			width: 25%;
+		}
+
+		.s-search-results__cards {
+			max-width: 100%;
+			width: 100%;
+
+			.s-search-results__card {
+				background: #fcfcfc;
+				width: 100%;
+
+				box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+				border-radius: 4px;
+				.card__featured {
+					display: none;
+					height: 4rem;
+					border-radius: 4px 4px 0 0;
+
+					&.active {
+						display: flex;
+						align-items: center;
+						padding: 0 3rem;
+						width: 100%;
+						background: $laranja-2-claro;
+						p {
+							@include typographyByName(botao-30);
+						}
+					}
+				}
+
+				.content__header {
+					display: flex;
+					gap: 1.6rem;
+					.header__title {
+						@include typographyByName(cabecalho-30);
+					}
+
+					.header__tag {
+						display: flex;
+
+						justify-content: center;
+						align-items: center;
+						padding: 0.8px;
+						gap: 0.4px;
+						color: $laranja-3;
+
+						.iconify {
+							font-size: 1.6rem;
+						}
+						p {
+							@include typographyByName(botao-20);
+						}
+					}
+				}
+			}
+		}
+	}
+}

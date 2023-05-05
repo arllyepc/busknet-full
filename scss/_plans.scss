@@ -1,80 +1,196 @@
 .s-plans-cta {
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 6.4rem 3rem;
-    border-radius: 0.4rem;
+	overflow-x: hidden;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 6.4rem 3rem;
+		border-radius: 0.4rem;
 
-    @include respond-to(small) {
-      padding: 2.4rem 1.6rem;
-    }
+		@include respond-to(small) {
+			padding: 2.4rem 1.6rem;
+		}
 
-    &.hughesnet {
-      background-color: #0091c4;
-    }
+		&.hughesnet {
+			background-color: #0091c4;
+		}
 
-    .s-plans-cta__logo {
-      @include respond-to(small) {
-        max-width: 12rem;
-      }
-    }
+		.s-plans-cta__logo {
+			@include respond-to(small) {
+				max-width: 12rem;
+			}
+		}
 
-    .s-plans-cta__btn {
-      color: $preto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1.6rem 3.8rem;
-      gap: 1rem;
-      width: 19.4rem;
-      height: 5.6rem;
-      background: #fcfcfc;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
-      @include typographyByName(botao-20);
+		.s-plans-cta__btn {
+			color: $preto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1.6rem 3.8rem;
+			gap: 1rem;
+			width: 19.4rem;
+			height: 5.6rem;
+			background: #fcfcfc;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+			border-radius: 4px;
+			@include typographyByName(botao-20);
 
-      @include respond-to(small) {
-        width: fit-content;
-      }
+			@include respond-to(small) {
+				width: fit-content;
+			}
 
-      .call-text {
-        @include respond-to(small) {
-          border: 0;
-          clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-          clip: rect(1px, 1px, 1px, 1px);
-          height: 1px;
-          margin: -1px;
-          overflow: hidden;
-          padding: 0;
-          position: absolute;
-          width: 1px;
-        }
-      }
+			.call-text {
+				@include respond-to(small) {
+					border: 0;
+					clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+					clip: rect(1px, 1px, 1px, 1px);
+					height: 1px;
+					margin: -1px;
+					overflow: hidden;
+					padding: 0;
+					position: absolute;
+					width: 1px;
+				}
+			}
 
-      .call-icon {
-        font-size: 2.4rem;
-      }
-    }
-  }
+			.call-icon {
+				font-size: 2.4rem;
+			}
+		}
+	}
 }
 
 .s-plans-by-city {
-  padding: 6.4rem 0;
-  .container {
-    h2 {
-      @include typographyByName(cabecalho-50);
-      margin-bottom: 1.2rem;
-    }
+	padding: 6.4rem 0;
+	.container {
+		h2 {
+			@include typographyByName(cabecalho-50);
+			margin-bottom: 1.2rem;
+		}
 
-    h3 {
-      @include typographyByName(linha-30);
-      .s-plans-by-city__change {
-        color: $laranja-0;
-        &:hover {
-          color: $laranja-1;
-        }
-      }
-    }
-  }
+		h3 {
+			@include typographyByName(linha-30);
+			margin-bottom: 2.4rem;
+			.s-plans-by-city__change {
+				color: $laranja-0;
+				&:hover {
+					color: $laranja-1;
+				}
+			}
+		}
+	}
+}
+
+.s-plan-why {
+	margin: 6.4rem 0;
+	width: 100%;
+	padding: 6.4rem 0;
+	.container {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		gap: 2.4rem;
+		h2 {
+			text-align: center;
+			@include typographyByName(cabecalho-50);
+
+			@include typographyByName(cabecalho-40);
+		}
+		.s-plan-why__grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+
+			@include respond-to(medium) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			@include respond-to(small) {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+}
+
+.s-plans-whatis {
+	margin-top: 6.4rem;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 4rem;
+
+		@include respond-to(medium) {
+			flex-direction: column;
+		}
+
+		@include respond-to(small) {
+			flex-direction: column;
+		}
+
+		.s-how__text {
+			h2 {
+				@include typographyByName(cabecalho-50);
+				margin-bottom: 1.6rem;
+				@include respond-to(medium) {
+					@include typographyByName(cabecalho-40);
+				}
+				@include respond-to(small) {
+					@include typographyByName(cabecalho-40);
+				}
+			}
+
+			p {
+				@include typographyByName(paragrafo-30);
+				@include respond-to(medium) {
+					@include typographyByName(paragrafo-20);
+				}
+
+				@include respond-to(small) {
+					@include typographyByName(paragrafo-20);
+				}
+			}
+		}
+	}
+}
+
+.s-plans-how {
+	margin-top: 4rem;
+	margin-bottom: 6.4rem;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 4rem;
+		@include respond-to(medium) {
+			flex-direction: column-reverse;
+		}
+
+		@include respond-to(small) {
+			flex-direction: column-reverse;
+		}
+
+		.s-why__text {
+			h2 {
+				@include typographyByName(cabecalho-50);
+				margin-bottom: 1.6rem;
+				@include respond-to(medium) {
+					@include typographyByName(cabecalho-40);
+				}
+				@include respond-to(small) {
+					@include typographyByName(cabecalho-40);
+				}
+			}
+
+			p {
+				@include typographyByName(paragrafo-30);
+				@include respond-to(medium) {
+					@include typographyByName(paragrafo-20);
+				}
+
+				@include respond-to(small) {
+					@include typographyByName(paragrafo-20);
+				}
+			}
+		}
+	}
 }

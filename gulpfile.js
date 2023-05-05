@@ -4,7 +4,7 @@ const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
-const uglify = require('gulp-uglify');
+/* const uglify = require('gulp-uglify'); */
 
 // Compilando o sass, adicionando autoprefixed e dando refresh na pagina
 function compilaSass() {
@@ -37,7 +37,7 @@ function gulpJs() {
 				presets: ['@babel/env'],
 			})
 		)
-		.pipe(uglify())
+		/* .pipe(uglify()) */
 		.pipe(gulp.dest('js/'))
 		.pipe(browserSync.stream());
 }

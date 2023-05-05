@@ -18,8 +18,8 @@
 
 	<body>
 		<header>
-			<!-- Este é o container do header da versão desktop -->
 			<div class="container">
+				<!-- Início da barra de navegação da versão desktop -->
 				<div class="navbar">
 					<a href="" class="navbar__logo">
 						<img src="/img/logo-busknet.svg" alt="Logo do Busknet" />
@@ -66,6 +66,8 @@
 						<div class="menu-btn__burger"></div>
 					</button>
 				</div>
+				<!-- Fim da barra de navegação da versão desktop -->
+				<!-- Início da barra de navegação da versão responsiva -->
 				<nav class="nav-mobile">
 					<ul class="nav-mobile__nav">
 						<li class="menu-item" id="menu-item-1">
@@ -110,6 +112,7 @@
 						</li>
 					</ul>
 				</nav>
+				<!-- Fim da barra de navegação da versão responsiva -->
 			</div>
 		</header>
 		<main>
@@ -137,7 +140,9 @@
 							<!-- digite a sua cidade -->
 							<div class="input-group">
 								<input type="text" placeholder="Digite sua cidade" />
-								<button class="btn primary">Ver planos na minha região</button>
+								<button class="btn primary" id="btn-search-plans">
+									Ver planos na minha região
+								</button>
 								<p class="right-content-or">ou</p>
 								<button class="btn secondary">Usar minha localização</button>
 							</div>
@@ -429,9 +434,31 @@
 				</div>
 			</div>
 		</footer>
+		<!-- Início do botão fixo de mensagem -->
 		<div class="button-fixed">
 			<a href="#"><img src="img/icon-message.svg" alt="ícone de mensagem" /></a>
 		</div>
+		<!-- Fim do botão fixo de mensagem -->
+
+		<!-- Início do modal de pesquisa de planos -->
+		<div class="modal-searching-plan" id="modal-searching-plan">
+			<div class="modal-searching-plan__content">
+				<div class="modal-searching-plan__content__header">
+					<img src="img/logo-busknet.svg" alt="Logo do Busknet" />
+					<h2>Estamos buscando os planos ideais para você...</h2>
+				</div>
+				<div class="modal-searching-plan__content__body">
+					<div class="modal-searching-plan__content__body__loader">
+						<div class="loader"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Fim do modal de pesquisa de planos -->
+
+		
+
+		<!-- Scripts fundamentais para o funcionamento da página-->
 		<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/all.js"></script>
