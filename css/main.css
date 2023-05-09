@@ -100,7 +100,8 @@ a:visited {
   transition: all 0.3s ease-in;
 }
 .btn.secondary:hover {
-  background: #d45411;
+  color: #a9430d;
+  border: #a9430d 1px solid;
 }
 .btn.white {
   display: flex;
@@ -1762,17 +1763,54 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
   }
 }
 
-.modal-stepper-container .step-content .step-form {
+.modal-stepper-container {
+  display: none;
+}
+.modal-stepper-container.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+.modal-stepper-container .step-content {
+  padding: 2rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+  background-color: #fff;
+}
+.modal-stepper-container .step-form {
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5.6rem;
 }
-.modal-stepper-container .step-content .step-form.last-step {
+.modal-stepper-container .step-form #close-indicador-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 2.4rem;
+}
+.modal-stepper-container .step-form #close-indicador-modal .iconify-close {
+  font-size: 2.4rem;
+  color: #ff6514;
+}
+.modal-stepper-container .step-form.active {
+  display: flex;
+}
+.modal-stepper-container .step-form.last-step {
   gap: 1.6rem;
 }
-.modal-stepper-container .step-content .step-form h3 {
+.modal-stepper-container .step-form h3 {
   font-family: "Gantari";
   font-style: normal;
   font-weight: 600;
@@ -1782,7 +1820,7 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
   /* color: $color; */
 }
 @media (max-width: 414px) {
-  .modal-stepper-container .step-content .step-form h3 {
+  .modal-stepper-container .step-form h3 {
     font-family: "Gantari";
     font-style: normal;
     font-weight: 600;
@@ -1792,7 +1830,7 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
     /* color: $color; */
   }
 }
-.modal-stepper-container .step-content .step-form .subtitle {
+.modal-stepper-container .step-form .subtitle {
   font-family: "Gantari";
   font-style: normal;
   font-weight: 400;
@@ -1802,7 +1840,7 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
   /* color: $color; */
 }
 @media (max-width: 414px) {
-  .modal-stepper-container .step-content .step-form .subtitle {
+  .modal-stepper-container .step-form .subtitle {
     font-family: "Gantari";
     font-style: normal;
     font-weight: 400;
@@ -1812,14 +1850,14 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
     /* color: $color; */
   }
 }
-.modal-stepper-container .step-content .step-form .step-form__grid {
+.modal-stepper-container .step-form .step-form__grid {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 3.2rem;
   align-items: center;
   justify-content: center;
 }
-.modal-stepper-container .step-content .step-form .step-form__grid .step-button-btn {
+.modal-stepper-container .step-form .step-form__grid .step-button-btn {
   cursor: pointer;
   display: flex;
   width: fit-content;
@@ -1838,32 +1876,73 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
   /* color: $color; */
   text-transform: uppercase;
 }
-.modal-stepper-container .step-content .step-form .step-form__grid .step-button-btn:hover {
+.modal-stepper-container .step-form .step-form__grid .step-button-btn:hover {
   background-color: #ffe7da;
 }
-.modal-stepper-container .step-content .step-form .step-form__grid .step-button-btn.active {
+.modal-stepper-container .step-form .step-form__grid .step-button-btn.active {
   color: #fff;
   background: #ff6514;
 }
-.modal-stepper-container .step-content .step-form .step-form__grid .step-button-btn.active:hover {
+.modal-stepper-container .step-form .step-form__grid .step-button-btn.active:hover {
   background: #d45411;
 }
-.modal-stepper-container .step-content .step-form .step-indicators-buttons {
+.modal-stepper-container .step-form .step-form__grid .step-input__group {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+.modal-stepper-container .step-form .step-form__grid .step-input__group input {
+  width: 100%;
+  padding: 2rem 1.6rem;
+  border: 1px solid #222121;
+  border-radius: 0.5rem;
+  outline: none;
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+}
+@media (min-width: 415px) and (max-width: 959px) {
+  .modal-stepper-container .step-form .step-form__grid .step-input__group input {
+    padding: 1.6rem;
+  }
+}
+@media (max-width: 414px) {
+  .modal-stepper-container .step-form .step-form__grid .step-input__group input {
+    padding: 1.6rem;
+    width: 100%;
+  }
+}
+.modal-stepper-container .step-form .step-form__grid .step-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+}
+.modal-stepper-container .step-form .step-form__grid .step-form__group .step-form__buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.modal-stepper-container .step-form .step-indicators-buttons {
   display: flex;
   gap: 0.8rem;
   align-items: center;
 }
-.modal-stepper-container .step-content .step-form .step-indicators-buttons .step-indicators {
+.modal-stepper-container .step-form .step-indicators-buttons .step-indicators {
   display: flex;
   gap: 0.8rem;
 }
-.modal-stepper-container .step-content .step-form .step-indicators-buttons .step-indicators .step {
+.modal-stepper-container .step-form .step-indicators-buttons .step-indicators .step {
   height: 1.8rem;
   width: 6.6rem;
   border-radius: 0.4rem;
   border: 1px solid #ff6514;
 }
-.modal-stepper-container .step-content .step-form .step-indicators-buttons .step-indicators .step.active {
+.modal-stepper-container .step-form .step-indicators-buttons .step-indicators .step.active {
   background: #ff6514;
 }
 

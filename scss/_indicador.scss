@@ -66,77 +66,148 @@
 }
 
 .modal-stepper-container {
+	display: none;
+	&.active {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.1);
+		z-index: 9999;
+	}
 	.step-content {
-		.step-form {
+		padding: 2rem;
+		border-radius: 10px;
+		width: 80%;
+		max-width: 800px;
+		position: relative;
+		background-color: #fff;
+	}
+
+	.step-form {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 5.6rem;
+
+		#close-indicador-modal {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+
+			cursor: pointer;
+			font-size: 2.4rem;
+			.iconify-close {
+				font-size: 2.4rem;
+				color: $laranja-0;
+			}
+		}
+		&.active {
+			// Adicione este bloco para exibir o formulário de etapas ativo
+			display: flex;
+		}
+		&.last-step {
+			gap: 1.6rem;
+		}
+
+		h3 {
+			@include typographyByName(cabecalho-40);
+			@include respond-to(small) {
+				@include typographyByName(cabecalho-30);
+			}
+		}
+
+		.subtitle {
+			@include typographyByName(linha-30);
+			@include respond-to(small) {
+				@include typographyByName(linha-20);
+			}
+		}
+		.step-form__grid {
 			display: flex;
 			flex-direction: column;
+			gap: 3.2rem;
 			align-items: center;
 			justify-content: center;
-			gap: 5.6rem;
-
-			&.last-step {
-				gap: 1.6rem;
-			}
-
-			h3 {
-				@include typographyByName(cabecalho-40);
-				@include respond-to(small) {
-					@include typographyByName(cabecalho-30);
+			.step-button-btn {
+				cursor: pointer;
+				display: flex;
+				width: fit-content;
+				align-items: center;
+				padding: 0.8rem 1.6rem;
+				border: 1px solid $laranja-0;
+				border-radius: 0.4rem;
+				color: $laranja-0;
+				transition: all 0.3s ease-in-out;
+				@include typographyByName(botao-10);
+				&:hover {
+					background-color: $laranja-5-claro;
+				}
+				&.active {
+					color: #fff;
+					background: $laranja-0;
+					&:hover {
+						background: $laranja-1;
+					}
 				}
 			}
 
-			.subtitle {
-				@include typographyByName(linha-30);
-				@include respond-to(small) {
+			.step-input__group {
+				display: flex;
+				align-items: center;
+				gap: 2.4rem;
+
+				input {
+					width: 100%;
+					padding: 2rem 1.6rem;
+					border: 1px solid $preto;
+					border-radius: 0.5rem;
+					outline: none;
 					@include typographyByName(linha-20);
+
+					@include respond-to(medium) {
+						padding: 1.6rem;
+					}
+
+					@include respond-to(small) {
+						padding: 1.6rem;
+						width: 100%;
+					}
 				}
 			}
-			.step-form__grid {
+			.step-form__group {
 				display: flex;
 				flex-direction: column;
 				gap: 1.6rem;
 				align-items: center;
-				justify-content: center;
-				.step-button-btn {
-					cursor: pointer;
+				.step-form__buttons {
 					display: flex;
-					width: fit-content;
 					align-items: center;
-					padding: 0.8rem 1.6rem;
-					border: 1px solid $laranja-0;
-					border-radius: 0.4rem;
-					color: $laranja-0;
-					transition: all 0.3s ease-in-out;
-					@include typographyByName(botao-10);
-					&:hover {
-						background-color: $laranja-5-claro;
-					}
-					&.active {
-						color: #fff;
-						background: $laranja-0;
-						&:hover {
-							background: $laranja-1;
-						}
-					}
+					gap: 1.6rem;
 				}
 			}
+		}
 
-			.step-indicators-buttons {
+		.step-indicators-buttons {
+			display: flex;
+			gap: 0.8rem;
+			align-items: center;
+			.step-indicators {
 				display: flex;
 				gap: 0.8rem;
-				align-items: center;
-				.step-indicators {
-					display: flex;
-					gap: 0.8rem;
-					.step {
-						height: 1.8rem;
-						width: 6.6rem;
-						border-radius: 0.4rem;
+				.step {
+					height: 1.8rem;
+					width: 6.6rem;
+					border-radius: 0.4rem;
 
-						border: 1px solid $laranja-0;
-						&.active {
-							background: $laranja-0;
-						}
+					border: 1px solid $laranja-0;
+					&.active {
+						background: $laranja-0;
 					}
 				}
 			}

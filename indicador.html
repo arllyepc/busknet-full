@@ -144,7 +144,9 @@
 							melhores ofertas de planos para você escolher.
 						</p>
 
-						<button class="btn primary">Indique o melhor plano para mim</button>
+						<button class="btn primary" id="open-modal">
+							Indique o melhor plano para mim
+						</button>
 						<button class="btn white">Conversar com atendente</button>
 					</div>
 				</div>
@@ -214,22 +216,27 @@
 
 		<div class="modal-stepper-container" id="modal-indicador">
 			<div class="step-content">
-				<form id="form-1" class="step-form active">
-					<button id="close-indicador-modal">
-						<iconify-icon class="iconify-close" icon="bi:close"></iconify-icon>
+				<form id="form-1" class="step-form">
+					<button type="button" id="close-indicador-modal">
+						<iconify-icon
+							class="iconify-close"
+							icon="ic:round-close"
+						></iconify-icon>
 					</button>
 					<h3>Quantas pessoas usam internet na sua casa?</h3>
 
 					<div class="step-form__grid">
-						<button class="step-button-btn">1 pessoa</button>
-						<button class="step-button-btn">2 pessoas</button>
-						<button class="step-button-btn">3 pessoas</button>
-						<button class="step-button-btn">4 pessoas ou mais</button>
+						<button type="button" class="step-button-btn">1 pessoa</button>
+						<button type="button" class="step-button-btn">2 pessoas</button>
+						<button type="button" class="step-button-btn">3 pessoas</button>
+						<button type="button" class="step-button-btn">
+							4 pessoas ou mais
+						</button>
 					</div>
 
 					<div class="step-indicators-buttons">
 						<div class="step-indicators">
-							<div class="step active" data-step="1"></div>
+							<div class="step" data-step="1"></div>
 
 							<div class="step" data-step="2"></div>
 
@@ -244,15 +251,23 @@
 					</div>
 				</form>
 				<form id="form-2" class="step-form">
+					<button type="button" id="close-indicador-modal">
+						<iconify-icon
+							class="iconify-close"
+							icon="ic:round-close"
+						></iconify-icon>
+					</button>
 					<h3>Você(s) usam internet principalmente para?</h3>
 
 					<div class="step-form__grid">
-						<button class="step-button-btn">
+						<button type="button" class="step-button-btn">
 							Redes sociais e sites em geral
 						</button>
-						<button class="step-button-btn">Streaming e vídeos</button>
-						<button class="step-button-btn">Videochamdas</button>
-						<button class="step-button-btn">Jogos online</button>
+						<button type="button" class="step-button-btn">
+							Streaming e vídeos
+						</button>
+						<button type="button" class="step-button-btn">Videochamdas</button>
+						<button type="button" class="step-button-btn">Jogos online</button>
 					</div>
 
 					<div class="step-indicators-buttons">
@@ -260,9 +275,9 @@
 							Voltar
 						</button>
 						<div class="step-indicators">
-							<div class="step active" data-step="1"></div>
+							<div class="step" data-step="1"></div>
 
-							<div class="step active" data-step="2"></div>
+							<div class="step" data-step="2"></div>
 
 							<div class="step" data-step="3"></div>
 
@@ -275,12 +290,22 @@
 					</div>
 				</form>
 				<form id="form-3" class="step-form">
+					<button type="button" id="close-indicador-modal">
+						<iconify-icon
+							class="iconify-close"
+							icon="ic:round-close"
+						></iconify-icon>
+					</button>
 					<h3>Você usa a internet para trabalho (home office)?</h3>
 
 					<div class="step-form__grid">
-						<button class="step-button-btn">Sim, todos os dias</button>
-						<button class="step-button-btn">Sim, mas não todos os dias</button>
-						<button class="step-button-btn">Não</button>
+						<button type="button" class="step-button-btn">
+							Sim, todos os dias
+						</button>
+						<button type="button" class="step-button-btn">
+							Sim, mas não todos os dias
+						</button>
+						<button type="button" class="step-button-btn">Não</button>
 					</div>
 
 					<div class="step-indicators-buttons">
@@ -288,11 +313,11 @@
 							Voltar
 						</button>
 						<div class="step-indicators">
-							<div class="step active" data-step="1"></div>
+							<div class="step" data-step="1"></div>
 
-							<div class="step active" data-step="2"></div>
+							<div class="step" data-step="2"></div>
 
-							<div class="step active" data-step="3"></div>
+							<div class="step" data-step="3"></div>
 
 							<div class="step" data-step="4"></div>
 							<div class="step" data-step="5"></div>
@@ -303,16 +328,28 @@
 					</div>
 				</form>
 				<form id="form-4" class="step-form">
+					<button type="button" id="close-indicador-modal">
+						<iconify-icon
+							class="iconify-close"
+							icon="ic:round-close"
+						></iconify-icon>
+					</button>
 					<h3>Sua casa tem aparelhos IoT?</h3>
 					<p class="subtitle">
 						(lâmpadas e speakers inteligentes, smartTVs, etc)
 					</p>
 
 					<div class="step-form__grid">
-						<button class="step-button-btn">De 1 a 5 aparelhos</button>
-						<button class="step-button-btn">De 6 a 10 aparelhos</button>
-						<button class="step-button-btn">Mais de 10 aparelhos</button>
-						<button class="step-button-btn">Não possuo</button>
+						<button type="button" class="step-button-btn">
+							De 1 a 5 aparelhos
+						</button>
+						<button type="button" class="step-button-btn">
+							De 6 a 10 aparelhos
+						</button>
+						<button type="button" class="step-button-btn">
+							Mais de 10 aparelhos
+						</button>
+						<button type="button" class="step-button-btn">Não possuo</button>
 					</div>
 
 					<div class="step-indicators-buttons">
@@ -320,13 +357,13 @@
 							Voltar
 						</button>
 						<div class="step-indicators">
-							<div class="step active" data-step="1"></div>
+							<div class="step" data-step="1"></div>
 
-							<div class="step active" data-step="2"></div>
+							<div class="step" data-step="2"></div>
 
-							<div class="step active" data-step="3"></div>
+							<div class="step" data-step="3"></div>
 
-							<div class="step active" data-step="4"></div>
+							<div class="step" data-step="4"></div>
 							<div class="step" data-step="5"></div>
 						</div>
 						<button type="button" class="next-button btn primary">
@@ -336,13 +373,19 @@
 				</form>
 
 				<form id="form-5" class="step-form last-step">
+					<button type="button" id="close-indicador-modal">
+						<iconify-icon
+							class="iconify-close"
+							icon="ic:round-close"
+						></iconify-icon>
+					</button>
 					<h3>Em qual endereço é a instalação?</h3>
 					<p class="subtitle">
 						Vamos consultar o melhor plano para sua região!
 					</p>
 
 					<div class="step-form__grid">
-						<div class="step-form__group">
+						<div class="step-input__group">
 							<input
 								type="text"
 								id="endereco"
@@ -364,12 +407,12 @@
 								Qual era sua operadora de internet residencial anterior?
 							</p>
 							<div class="step-form__buttons">
-								<button class="step-button-btn">Claro</button>
-								<button class="step-button-btn">Oi fibra</button>
-								<button class="step-button-btn">Vivo</button>
-								<button class="step-button-btn">TIM</button>
-								<button class="step-button-btn">HughesNet</button>
-								<button class="step-button-btn">Outras</button>
+								<button type="button" class="step-button-btn">Claro</button>
+								<button type="button" class="step-button-btn">Oi fibra</button>
+								<button type="button" class="step-button-btn">Vivo</button>
+								<button type="button" class="step-button-btn">TIM</button>
+								<button type="button" class="step-button-btn">HughesNet</button>
+								<button type="button" class="step-button-btn">Outras</button>
 							</div>
 						</div>
 
@@ -379,10 +422,16 @@
 								internet. Não se preocupe, essa pergunta não é obrigatória.
 							</p>
 							<div class="step-form__buttons">
-								<button class="step-button-btn">Mudança de endereço</button>
-								<button class="step-button-btn">Valores altos</button>
-								<button class="step-button-btn">Serviço ruim</button>
-								<button class="step-button-btn">Outros</button>
+								<button type="button" class="step-button-btn">
+									Mudança de endereço
+								</button>
+								<button type="button" class="step-button-btn">
+									Valores altos
+								</button>
+								<button type="button" class="step-button-btn">
+									Serviço ruim
+								</button>
+								<button type="button" class="step-button-btn">Outros</button>
 							</div>
 						</div>
 					</div>
@@ -392,14 +441,14 @@
 							Voltar
 						</button>
 						<div class="step-indicators">
-							<div class="step active" data-step="1"></div>
+							<div class="step" data-step="1"></div>
 
-							<div class="step active" data-step="2"></div>
+							<div class="step" data-step="2"></div>
 
-							<div class="step active" data-step="3"></div>
+							<div class="step" data-step="3"></div>
 
-							<div class="step active" data-step="4"></div>
-							<div class="step active" data-step="5"></div>
+							<div class="step" data-step="4"></div>
+							<div class="step" data-step="5"></div>
 						</div>
 						<button type="submit" class="next-button btn primary">
 							Indicar

@@ -268,71 +268,6 @@ if (btnSearch) {
 	});
 }
 
-/* document.addEventListener('DOMContentLoaded', () => {
-	const showDetailsButtons = document.querySelectorAll('.show-details');
-	const modals = document.querySelectorAll('.card-plan__modal');
-
-	showDetailsButtons.forEach((button, index) => {
-		button.setAttribute('data-card-index', index);
-
-		button.addEventListener('click', (event) => {
-			const cardIndex = event.target.getAttribute('data-card-index');
-			modals[cardIndex].classList.add('show');
-		});
-	});
-
-	modals.forEach((modal) => {
-		const closeBtn = modal.querySelector('.close-btn');
-
-		closeBtn.addEventListener('click', () => {
-			modal.classList.remove('show');
-		});
-
-		// Fechar o modal ao clicar fora do conteúdo
-		modal.addEventListener('click', (event) => {
-			const modalContent = modal.querySelector('.modal-content');
-			if (!modalContent.contains(event.target)) {
-				modal.classList.remove('show');
-			}
-		});
-	});
-});
- */
-/* document.addEventListener("DOMContentLoaded", () => {
-  const showDetailsButtons = document.querySelectorAll(".show-details");
-  const modal = document.querySelector("#planModal");
-  const modalContent = modal.querySelector(".modal-content");
-  const closeModalBtn = modal.querySelector(".close-btn");
-
-  showDetailsButtons.forEach((button, index) => {
-    button.setAttribute("data-card-index", index);
-
-    button.addEventListener("click", (event) => {
-      const cardIndex = event.target.getAttribute("data-card-index");
-      const card = document.querySelectorAll(".card-plan")[cardIndex];
-      const modalList = card.querySelector(".modal__list").cloneNode(true);
-
-      // Limpar o conteúdo do modal e preencher com o conteúdo do card clicado
-      modalContent.querySelector(".modal__list").innerHTML = "";
-      modalContent.querySelector(".modal__list").appendChild(modalList);
-
-      modal.classList.add("show");
-    });
-  });
-
-  closeModalBtn.addEventListener("click", () => {
-    modal.classList.remove("show");
-  });
-
-  // Fechar o modal ao clicar fora do conteúdo
-  modal.addEventListener("click", (event) => {
-    if (!modalContent.contains(event.target)) {
-      modal.classList.remove("show");
-    }
-  });
-});
- */
-
 document.addEventListener('DOMContentLoaded', () => {
 	const swiper = new Swiper('.swiper-container', {
 		slidesPerView: 'auto',
@@ -374,5 +309,85 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (event.target.classList.contains('card-plan__modal')) {
 			event.target.style.display = 'none';
 		}
+	});
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+	const stepForms = document.querySelectorAll('.step-form');
+	const nextButtons = document.querySelectorAll('.next-button');
+	const previousButtons = document.querySelectorAll('.previous-button');
+	const stepIndicators = document.querySelectorAll('.step-indicators .step');
+	const optionButtons = document.querySelectorAll('.step-button-btn');
+
+	const openModalButton = document.getElementById('open-modal');
+	const modal = document.getElementById('modal-indicador');
+
+	const closeModal = () => {
+		const modalContainer = document.querySelector('.modal-stepper-container');
+		modalContainer.classList.remove('active');
+	};
+
+	const closeButtons = document.querySelectorAll('#close-indicador-modal');
+
+	closeButtons.forEach((button) => {
+		button.addEventListener('click', () => {
+			closeModal();
+		});
+	});
+
+	// Função para abrir o modal
+	function openModal() {
+		modal.classList.add('active');
+		updateSteps(1);
+	}
+
+	// Adicionar manipuladores de eventos para abrir e fechar o modal
+	openModalButton.addEventListener('click', openModal);
+
+	function updateSteps(step) {
+		stepForms.forEach((form, index) => {
+			form.classList.toggle('active', index === step - 1);
+		});
+
+		// Encontrar todos os elementos ".step-indicators"
+		const stepIndicatorsContainers =
+			document.querySelectorAll('.step-indicators');
+
+		stepIndicatorsContainers.forEach((stepIndicators) => {
+			stepIndicators.querySelectorAll('.step').forEach((indicator, index) => {
+				if (index < step) {
+					indicator.classList.add('active');
+				} else {
+					indicator.classList.remove('active');
+				}
+			});
+		});
+	}
+	nextButtons.forEach((button) => {
+		button.addEventListener('click', () => {
+			const currentStep = Array.from(stepForms).findIndex((form) =>
+				form.classList.contains('active')
+			);
+			updateSteps(currentStep + 2);
+		});
+	});
+
+	previousButtons.forEach((button) => {
+		button.addEventListener('click', () => {
+			const currentStep = Array.from(stepForms).findIndex((form) =>
+				form.classList.contains('active')
+			);
+			updateSteps(currentStep);
+		});
+	});
+
+	// Adicionar manipulador de eventos para botões de opção
+	optionButtons.forEach((button) => {
+		button.addEventListener('click', () => {
+			const currentStep = Array.from(stepForms).findIndex((form) =>
+				form.classList.contains('active')
+			);
+			updateSteps(currentStep + 2);
+		});
 	});
 });
