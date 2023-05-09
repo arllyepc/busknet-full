@@ -167,27 +167,74 @@ mainBtn.addEventListener('click', () => {
 
 // Função para lidar com a troca de botões ativos
 function handleActiveBtn(targetBtn) {
-  const allBtns = [...priceBtns, ...velocityBtns];
+	const allBtns = [...priceBtns, ...velocityBtns];
 
-  allBtns.forEach((btn) => {
-    if (btn === targetBtn) {
-      btn.classList.add('active');
-      mainBtn.textContent = btn.textContent;
-    } else {
-      btn.classList.remove('active');
-    }
-  });
+	allBtns.forEach((btn) => {
+		if (btn === targetBtn) {
+			btn.classList.add('active');
+			mainBtn.textContent = btn.textContent;
+		} else {
+			btn.classList.remove('active');
+		}
+	});
 }
 
 // Adiciona a classe 'active' ao clicar em um dos botões de others-group-price e others-group-velocity
 priceBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    handleActiveBtn(btn);
-  });
+	btn.addEventListener('click', () => {
+		handleActiveBtn(btn);
+	});
 });
 
 velocityBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    handleActiveBtn(btn);
-  });
+	btn.addEventListener('click', () => {
+		handleActiveBtn(btn);
+	});
+});
+
+/* Botão de 'ver detalhhes' no card de resultados de busca */
+
+document
+	.querySelectorAll('.btn-details-desktop, .btn-details-mobile')
+	.forEach((btn) => {
+		btn.addEventListener('click', (event) => {
+			const card = event.target.closest('.s-search-results__card');
+			const cardFooter = card.querySelector('.card__footer');
+			const showDetailsText = 'Ver detalhes';
+			const hideDetailsText = 'Esconder detalhes';
+
+			cardFooter.classList.toggle('active');
+
+			if (event.target.innerHTML.trim() === showDetailsText) {
+				event.target.innerHTML = hideDetailsText;
+			} else {
+				event.target.innerHTML = showDetailsText;
+			}
+		});
+	});
+
+// Seleciona todos os elementos com a classe "aside-group__filter"
+const filterItems = document.querySelectorAll('.aside-group__filter');
+
+// Adiciona um event listener a cada elemento
+filterItems.forEach((item) => {
+	item.addEventListener('click', function () {
+		// Verifica se o item clicado já tem a classe "active"
+		const isActive = item.classList.contains('active');
+
+		// Remove a classe "active" dos irmãos do elemento clicado
+		item.parentNode.childNodes.forEach((sibling) => {
+			if (sibling.nodeType === Node.ELEMENT_NODE) {
+				sibling.classList.remove('active');
+			}
+		});
+
+		// Se o elemento clicado já possui a classe "active", a remove
+		// Caso contrário, adiciona a classe "active"
+		if (isActive) {
+			item.classList.remove('active');
+		} else {
+			item.classList.add('active');
+		}
+	});
 });

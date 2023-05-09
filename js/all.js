@@ -185,3 +185,42 @@ velocityBtns.forEach(function (btn) {
     handleActiveBtn(btn);
   });
 });
+/* Botão de 'ver detalhhes' no card de resultados de busca */
+
+document.querySelectorAll('.btn-details-desktop, .btn-details-mobile').forEach(function (btn) {
+  btn.addEventListener('click', function (event) {
+    var card = event.target.closest('.s-search-results__card');
+    var cardFooter = card.querySelector('.card__footer');
+    var showDetailsText = 'Ver detalhes';
+    var hideDetailsText = 'Esconder detalhes';
+    cardFooter.classList.toggle('active');
+
+    if (event.target.innerHTML.trim() === showDetailsText) {
+      event.target.innerHTML = hideDetailsText;
+    } else {
+      event.target.innerHTML = showDetailsText;
+    }
+  });
+}); // Seleciona todos os elementos com a classe "aside-group__filter"
+
+var filterItems = document.querySelectorAll('.aside-group__filter'); // Adiciona um event listener a cada elemento
+
+filterItems.forEach(function (item) {
+  item.addEventListener('click', function () {
+    // Verifica se o item clicado já tem a classe "active"
+    var isActive = item.classList.contains('active'); // Remove a classe "active" dos irmãos do elemento clicado
+
+    item.parentNode.childNodes.forEach(function (sibling) {
+      if (sibling.nodeType === Node.ELEMENT_NODE) {
+        sibling.classList.remove('active');
+      }
+    }); // Se o elemento clicado já possui a classe "active", a remove
+    // Caso contrário, adiciona a classe "active"
+
+    if (isActive) {
+      item.classList.remove('active');
+    } else {
+      item.classList.add('active');
+    }
+  });
+});

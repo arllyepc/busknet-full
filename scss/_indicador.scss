@@ -1,66 +1,144 @@
 .main-indicator {
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	height: 80vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-  @include respond-to(small) {
-    height: auto;
-    padding: 4rem 0;
-  }
+	@include respond-to(small) {
+		height: auto;
+		padding: 4rem 0;
+	}
 
-  @include respond-to(medium) {
-    height: auto;
-    padding: 4rem 0;
-  }
+	@include respond-to(medium) {
+		height: auto;
+		padding: 4rem 0;
+	}
 
-  .s-indicator-content {
-    height: 100%;
-    display: flex;
-    align-items: center;
+	.s-indicator-content {
+		height: 100%;
+		display: flex;
+		align-items: center;
 
-    @include respond-to(small) {
-      flex-direction: column;
-      justify-content: center;
-      gap: 4rem;
-    }
-    .container {
-      display: flex;
-      align-items: center;
-      gap: 4rem;
+		@include respond-to(small) {
+			flex-direction: column;
+			justify-content: center;
+			gap: 4rem;
+		}
+		.container {
+			display: flex;
+			align-items: center;
+			gap: 4rem;
 
-      @include respond-to(small) {
-        flex-direction: column;
-        justify-content: center;
-        gap: 4rem;
-      }
+			@include respond-to(small) {
+				flex-direction: column;
+				justify-content: center;
+				gap: 4rem;
+			}
 
-      @include respond-to(medium) {
-        flex-direction: column;
-        justify-content: center;
-        gap: 4rem;
-      }
+			@include respond-to(medium) {
+				flex-direction: column;
+				justify-content: center;
+				gap: 4rem;
+			}
 
-      .s-indicator-content__text {
-        max-width: 54.6rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1.6rem;
+			.s-indicator-content__text {
+				max-width: 54.6rem;
+				display: flex;
+				flex-direction: column;
+				gap: 1.6rem;
 
-        h2 {
-          @include typographyByName(cabecalho-50);
-          @include respond-to(small) {
-            @include typographyByName(cabecalho-40);
-          }
-        }
+				h2 {
+					@include typographyByName(cabecalho-50);
+					@include respond-to(small) {
+						@include typographyByName(cabecalho-40);
+					}
+				}
 
-        p {
-          @include typographyByName(paragrafo-30);
-          @include respond-to(small) {
-            @include typographyByName(paragrafo-20);
-          }
-        }
-      }
-    }
-  }
+				p {
+					@include typographyByName(paragrafo-30);
+					@include respond-to(small) {
+						@include typographyByName(paragrafo-20);
+					}
+				}
+			}
+		}
+	}
+}
+
+.modal-stepper-container {
+	.step-content {
+		.step-form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 5.6rem;
+
+			&.last-step {
+				gap: 1.6rem;
+			}
+
+			h3 {
+				@include typographyByName(cabecalho-40);
+				@include respond-to(small) {
+					@include typographyByName(cabecalho-30);
+				}
+			}
+
+			.subtitle {
+				@include typographyByName(linha-30);
+				@include respond-to(small) {
+					@include typographyByName(linha-20);
+				}
+			}
+			.step-form__grid {
+				display: flex;
+				flex-direction: column;
+				gap: 1.6rem;
+				align-items: center;
+				justify-content: center;
+				.step-button-btn {
+					cursor: pointer;
+					display: flex;
+					width: fit-content;
+					align-items: center;
+					padding: 0.8rem 1.6rem;
+					border: 1px solid $laranja-0;
+					border-radius: 0.4rem;
+					color: $laranja-0;
+					transition: all 0.3s ease-in-out;
+					&:hover {
+						background-color: $laranja-5-claro;
+					}
+					&.active {
+						color: #fff;
+						background: $laranja-0;
+						&:hover {
+							background: $laranja-1;
+						}
+					}
+				}
+			}
+
+			.step-indicators-buttons {
+				display: flex;
+				gap: 0.8rem;
+				align-items: center;
+				.step-indicators {
+					display: flex;
+					gap: 0.8rem;
+					.step {
+						height: 1.8rem;
+						width: 6.6rem;
+						border-radius: 0.4rem;
+
+						border: 1px solid $laranja-0;
+						&.active {
+							background: $laranja-0;
+						}
+					}
+				}
+			}
+		}
+	}
 }

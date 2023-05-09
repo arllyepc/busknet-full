@@ -115,6 +115,9 @@
 				<!-- Fim da barra de navegação da versão responsiva -->
 			</div>
 		</header>
+		<!-- <div class="overlay-search">
+			
+		</div>  -->
 		<!--  início dos breadcrumbs da Página -->
 		<nav aria-label="Breadcrumb">
 			<div class="container">
@@ -138,7 +141,7 @@
 				<div class="container">
 					<h2>Internet banda larga</h2>
 					<p>
-						Use nosso comaparador para procurar o melhor plano de internet para
+						Use nosso comparador para procurar o melhor plano de internet para
 						você
 					</p>
 					<form action="">
@@ -146,7 +149,11 @@
 						<div class="input-group">
 							<input type="text" placeholder="Digite sua cidade" />
 							<button class="btn primary" id="btn-search-plans">
-								Pesquisar planos
+								<span>Pesquisar planos</span>
+								<iconify-icon
+									class="iconify-search"
+									icon="bi:search"
+								></iconify-icon>
 							</button>
 						</div>
 					</form>
@@ -191,10 +198,62 @@
 
 			<section class="s-search-results__results">
 				<div class="container">
-					<aside></aside>
+					<aside class="s-search-results__aside">
+						<div class="overlay-button">
+							<button class="btn primary" id="apply-filters">
+								Aplicar filtros
+								<iconify-icon
+									icon="ic:round-filter-alt"
+									class="icon"
+								></iconify-icon>
+							</button>
+						</div>
 
-					<div class="s-search-results__cards">
-						<div class="s-search-results__card">
+						<button class="s-search-results__close-btn">
+							<iconify-icon icon="ic:round-close" class="icon"></iconify-icon>
+						</button>
+						<ul class="aside-groups">
+							<li class="aside-group">
+								<p class="aside-group__title">Velocidade da internet</p>
+								<ul class="aside-group__filters">
+									<li class="aside-group__filter">Até 100Mbps</li>
+									<li class="aside-group__filter">De 100Mbps a 300Mbps</li>
+									<li class="aside-group__filter">De 300Mbps a 500 mbps</li>
+									<li class="aside-group__filter">De 500Mbps a 1 Gbps</li>
+								</ul>
+							</li>
+							<li class="aside-group">
+								<p class="aside-group__title">Velocidade da internet</p>
+								<ul class="aside-group__filters">
+									<li class="aside-group__filter">Até 100Mbps</li>
+									<li class="aside-group__filter">De 100Mbps a 300Mbps</li>
+									<li class="aside-group__filter">De 300Mbps a 500 mbps</li>
+									<li class="aside-group__filter">De 500Mbps a 1 Gbps</li>
+								</ul>
+							</li>
+							<li class="aside-group">
+								<p class="aside-group__title">Velocidade da internet</p>
+								<ul class="aside-group__filters">
+									<li class="aside-group__filter">Até 100Mbps</li>
+									<li class="aside-group__filter">De 100Mbps a 300Mbps</li>
+									<li class="aside-group__filter">De 300Mbps a 500 mbps</li>
+									<li class="aside-group__filter">De 500Mbps a 1 Gbps</li>
+								</ul>
+							</li>
+							<li class="aside-group">
+								<p class="aside-group__title">Velocidade da internet</p>
+								<ul class="aside-group__filters">
+									<li class="aside-group__filter">Até 100Mbps</li>
+									<li class="aside-group__filter">De 100Mbps a 300Mbps</li>
+									<li class="aside-group__filter">De 300Mbps a 500 mbps</li>
+									<li class="aside-group__filter">De 500Mbps a 1 Gbps</li>
+								</ul>
+							</li>
+						</ul>
+					</aside>
+
+					<ul class="s-search-results__cards">
+						<li class="s-search-results__card">
 							<div class="card__featured active">
 								<p>Este é o plano que indicamos para você</p>
 							</div>
@@ -211,15 +270,320 @@
 
 								<div class="content__body">
 									<div class="body__details">
-										<div class="details-left"></div>
+										<div class="details-left">
+											<img
+												class="details-left__logo"
+												src="img/logo-hughesnet.svg"
+												alt="Logo da HughesNet"
+											/>
+											<div class="details-left__plan">
+												<iconify-icon
+													class="description__icon"
+													icon="ph:wifi-high"
+												></iconify-icon>
+												<div class="card-plan__description">
+													<p class="description__velocity">250 Mega</p>
+													<p class="description__type">Internet fixa</p>
+												</div>
+											</div>
+										</div>
 
-										<div class="details-right"></div>
+										<div class="details-right">
+											<div class="details-right__price">
+												<p class="price__prefix">por apenas</p>
+												<p class="price__value">
+													<span class="value__currency">R$</span>219,90
+												</p>
+												<p class="price__recurrence">mensal</p>
+											</div>
+											<div class="details-right__buttons">
+												<a class="btn primary" href="#">Ir para o site</a>
+												<button class="btn text btn-details-desktop">
+													Ver detalhes
+												</button>
+											</div>
+										</div>
 									</div>
-									<div class="body__tags"></div>
+									<ul class="body__tags">
+										<li class="body__tag">
+											<iconify-icon class="iconify" icon="ic:round-check">
+											</iconify-icon>
+											<p>Internet cabo</p>
+										</li>
+										<li class="body__tag">
+											<iconify-icon class="iconify" icon="ic:round-check">
+											</iconify-icon>
+											<p>Sem adesão</p>
+										</li>
+										<li class="body__tag">
+											<iconify-icon class="iconify" icon="ic:round-check">
+											</iconify-icon>
+											<p>Instalação grátis</p>
+										</li>
+									</ul>
 								</div>
+								<!-- botão "ver detalhes" da versão mobile -->
+								<button class="btn text btn-details-mobile">
+									Esconder detalhes
+								</button>
 							</div>
-						</div>
-					</div>
+
+							<ul class="card__footer active">
+								<li class="footer__item">
+									<p class="item__title">Velocidade de download</p>
+									<p class="item__description">
+										<span class="item__subitem">250Mbps</span>
+									</p>
+								</li>
+								<li class="footer__item">
+									<p class="item__title">Velocidade de upload</p>
+									<p class="item__description">
+										<span class="item__subitem">35Mbps</span>
+									</p>
+								</li>
+								<li class="footer__item">
+									<p class="item__title">Incluso</p>
+									<p class="item__description">
+										<span class="item__subitem">Modem/roteador</span>
+									</p>
+								</li>
+								<li class="footer__item">
+									<p class="item__title">Fidelidade</p>
+									<p class="item__description">
+										<span class="item__subitem">Sem fidelidade</span>
+									</p>
+								</li>
+								<li class="footer__item">
+									<p class="item__title">Serviços Inclusos</p>
+									<p class="item__description">
+										<span class="item__subitem">Claro Vídeo</span>,
+										<span class="item__subitem">Skeelo</span>,
+										<span class="item__subitem">McAfee</span>
+									</p>
+								</li>
+							</ul>
+						</li>
+						<li class="s-search-results__card">
+							<div class="card__featured">
+								<p>Este é o plano que indicamos para você</p>
+							</div>
+
+							<div class="card__content">
+								<div class="content__header">
+									<div class="header__title">Claro Net 350 Mega</div>
+									<div class="header__tag">
+										<iconify-icon class="iconify" icon="ic:round-check">
+										</iconify-icon>
+										<p>Cobertura disponível</p>
+									</div>
+								</div>
+
+								<div class="content__body">
+									<div class="body__details">
+										<div class="details-left">
+											<img
+												class="details-left__logo"
+												src="img/logo-hughesnet.svg"
+												alt="Logo da HughesNet"
+											/>
+											<div class="details-left__plan">
+												<iconify-icon
+													class="description__icon"
+													icon="ph:wifi-high"
+												></iconify-icon>
+												<div class="card-plan__description">
+													<p class="description__velocity">250 Mega</p>
+													<p class="description__type">Internet fixa</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="details-right">
+											<div class="details-right__price">
+												<p class="price__prefix">por apenas</p>
+												<p class="price__value">
+													<span class="value__currency">R$</span>219,90
+												</p>
+												<p class="price__recurrence">mensal</p>
+											</div>
+											<div class="details-right__buttons">
+												<a class="btn primary" href="#">Ir para o site</a>
+												<button class="btn text btn-details-desktop">
+													Ver detalhes
+												</button>
+											</div>
+										</div>
+									</div>
+									<ul class="body__tags">
+										<li class="body__tag">
+											<iconify-icon class="iconify" icon="ic:round-check">
+											</iconify-icon>
+											<p>Internet cabo</p>
+										</li>
+										<li class="body__tag">
+											<iconify-icon class="iconify" icon="ic:round-check">
+											</iconify-icon>
+											<p>Sem adesão</p>
+										</li>
+										<li class="body__tag">
+											<iconify-icon class="iconify" icon="ic:round-check">
+											</iconify-icon>
+											<p>Instalação grátis</p>
+										</li>
+									</ul>
+								</div>
+								<!-- botão "ver detalhes" da versão mobile -->
+								<button class="btn text btn-details-mobile">
+									Ver detalhes
+								</button>
+							</div>
+
+							<ul class="card__footer">
+								<li class="footer__item">
+									<p class="item__title">Velocidade de download</p>
+									<p class="item__description">
+										<span class="item__subitem">250Mbps</span>
+									</p>
+								</li>
+								<li class="footer__item">
+									<p class="item__title">Velocidade de upload</p>
+									<p class="item__description">
+										<span class="item__subitem">35Mbps</span>
+									</p>
+								</li>
+								<li class="footer__item">
+									<p class="item__title">Incluso</p>
+									<p class="item__description">
+										<span class="item__subitem">Modem/roteador</span>
+									</p>
+								</li>
+								<li class="footer__item">
+									<p class="item__title">Fidelidade</p>
+									<p class="item__description">
+										<span class="item__subitem">Sem fidelidade</span>
+									</p>
+								</li>
+								<li class="footer__item">
+									<p class="item__title">Serviços Inclusos</p>
+									<p class="item__description">
+										<span class="item__subitem">Claro Vídeo</span>,
+										<span class="item__subitem">Skeelo</span>,
+										<span class="item__subitem">McAfee</span>
+									</p>
+								</li>
+							</ul>
+						</li>
+						<li class="s-search-results__card">
+							<div class="card__featured">
+								<p>Este é o plano que indicamos para você</p>
+							</div>
+
+							<div class="card__content">
+								<div class="content__header">
+									<div class="header__title">Claro Net 350 Mega</div>
+									<div class="header__tag">
+										<iconify-icon class="iconify" icon="ic:round-check">
+										</iconify-icon>
+										<p>Cobertura disponível</p>
+									</div>
+								</div>
+
+								<div class="content__body">
+									<div class="body__details">
+										<div class="details-left">
+											<img
+												class="details-left__logo"
+												src="img/logo-hughesnet.svg"
+												alt="Logo da HughesNet"
+											/>
+											<div class="details-left__plan">
+												<iconify-icon
+													class="description__icon"
+													icon="ph:wifi-high"
+												></iconify-icon>
+												<div class="card-plan__description">
+													<p class="description__velocity">250 Mega</p>
+													<p class="description__type">Internet fixa</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="details-right">
+											<div class="details-right__price">
+												<p class="price__prefix">por apenas</p>
+												<p class="price__value">
+													<span class="value__currency">R$</span>219,90
+												</p>
+												<p class="price__recurrence">mensal</p>
+											</div>
+											<div class="details-right__buttons">
+												<a class="btn primary" href="#">Ir para o site</a>
+												<button class="btn text btn-details-desktop">
+													Ver detalhes
+												</button>
+											</div>
+										</div>
+									</div>
+									<ul class="body__tags">
+										<li class="body__tag">
+											<iconify-icon class="iconify" icon="ic:round-check">
+											</iconify-icon>
+											<p>Internet cabo</p>
+										</li>
+										<li class="body__tag">
+											<iconify-icon class="iconify" icon="ic:round-check">
+											</iconify-icon>
+											<p>Sem adesão</p>
+										</li>
+										<li class="body__tag">
+											<iconify-icon class="iconify" icon="ic:round-check">
+											</iconify-icon>
+											<p>Instalação grátis</p>
+										</li>
+									</ul>
+								</div>
+								<!-- botão "ver detalhes" da versão mobile -->
+								<button class="btn text btn-details-mobile">
+									Ver detalhes
+								</button>
+							</div>
+
+							<ul class="card__footer">
+								<li class="footer__item">
+									<p class="item__title">Velocidade de download</p>
+									<p class="item__description">
+										<span class="item__subitem">250Mbps</span>
+									</p>
+								</li>
+								<li class="footer__item">
+									<p class="item__title">Velocidade de upload</p>
+									<p class="item__description">
+										<span class="item__subitem">35Mbps</span>
+									</p>
+								</li>
+								<li class="footer__item">
+									<p class="item__title">Incluso</p>
+									<p class="item__description">
+										<span class="item__subitem">Modem/roteador</span>
+									</p>
+								</li>
+								<li class="footer__item">
+									<p class="item__title">Fidelidade</p>
+									<p class="item__description">
+										<span class="item__subitem">Sem fidelidade</span>
+									</p>
+								</li>
+								<li class="footer__item">
+									<p class="item__title">Serviços Inclusos</p>
+									<p class="item__description">
+										<span class="item__subitem">Claro Vídeo</span>,
+										<span class="item__subitem">Skeelo</span>,
+										<span class="item__subitem">McAfee</span>
+									</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 			</section>
 
