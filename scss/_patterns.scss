@@ -1,317 +1,386 @@
 /* BOTÕES */
 
 .btn {
-	&.primary {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		padding: 1.6rem 3.8rem;
+  &.primary {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem 3.8rem;
 
-		min-width: 15.6rem;
-		height: 5.6rem;
+    min-width: 15.6rem;
+    height: 5.6rem;
 
-		background: $laranja-0;
+    background: $laranja-0;
 
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-		border-radius: 4px;
-		color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    color: #fff;
 
-		@include typographyByName(botao-20);
-		transition: all 0.3s ease-in;
+    @include typographyByName(botao-20);
+    transition: all 0.3s ease-in;
 
-		&:hover {
-			background: $laranja-1;
-			/* Elevação */
-		}
-	}
+    &:hover {
+      background: $laranja-1;
+      /* Elevação */
+    }
+  }
 
-	&.secondary {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		padding: 1.6rem 3.8rem;
+  &.secondary {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem 3.8rem;
 
-		min-width: 15.6rem;
-		height: 5.6rem;
+    min-width: 15.6rem;
+    height: 5.6rem;
 
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-		border-radius: 4px;
-		color: $laranja-0;
-		border: $laranja-0 1px solid;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    color: $laranja-0;
+    border: $laranja-0 1px solid;
 
-		@include typographyByName(botao-20);
-		transition: all 0.3s ease-in;
+    @include typographyByName(botao-20);
+    transition: all 0.3s ease-in;
 
-		&:hover {
-			background: $laranja-1;
-		}
-	}
+    &:hover {
+      background: $laranja-1;
+    }
+  }
 
-	&.white {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		padding: 1.6rem 3.8rem;
+  &.white {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem 3.8rem;
 
-		min-width: 15.6rem;
-		height: 5.6rem;
-		color: $laranja-0;
+    min-width: 15.6rem;
+    height: 5.6rem;
+    color: $laranja-0;
 
-		background: $branco-gelo;
+    background: $branco-gelo;
 
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-		border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
 
-		@include typographyByName(botao-20);
-		transition: all 0.3s ease-in;
+    @include typographyByName(botao-20);
+    transition: all 0.3s ease-in;
 
-		&:hover {
-			background: $laranja-1;
-			color: #fff;
-		}
-	}
+    &:hover {
+      background: $laranja-1;
+      color: #fff;
+    }
+  }
 
-	&.text {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 1.6rem 3.8rem;
-		@include typographyByName(botao-40);
-		text-decoration: underline;
-		color: $laranja-0;
+  &.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem 3.8rem;
+    @include typographyByName(botao-40);
+    text-decoration: underline;
+    color: $laranja-0;
 
-		&:hover {
-			color: $laranja-1;
-		}
-	}
+    &:hover {
+      color: $laranja-1;
+    }
+  }
 }
 
 /* ACCORDION */
 
 .s-faq__accordion {
-	cursor: pointer;
-	width: 100%;
+  cursor: pointer;
+  width: 100%;
 
-	border-bottom: 1px solid #222;
-	transition: all 0.3s ease-in;
-	.s-faq__accordion-header {
-		@include typographyByName(linha-30);
-		/* border-bottom: 1px solid #222; */
-		padding: 1.6rem 2.4rem;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		.iconify-more {
-			transition: all 0.1s ease-in;
-		}
-		&.active {
-			.iconify-more {
-				transform: rotate(45deg);
-			}
-		}
-	}
-	.s-faq__accordion-content {
-		padding: 1.6rem 2.4rem;
-		display: none;
-		@include typographyByName(paragrafo-20);
+  border-bottom: 1px solid #222;
+  transition: all 0.3s ease-in;
+  .s-faq__accordion-header {
+    @include typographyByName(linha-30);
+    /* border-bottom: 1px solid #222; */
+    padding: 1.6rem 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .iconify-more {
+      transition: all 0.1s ease-in;
+    }
+    &.active {
+      .iconify-more {
+        transform: rotate(45deg);
+      }
+    }
+  }
+  .s-faq__accordion-content {
+    padding: 1.6rem 2.4rem;
+    display: none;
+    @include typographyByName(paragrafo-20);
 
-		&.active {
-			display: block;
-			border-top: 1px solid #222;
-		}
-	}
+    &.active {
+      display: block;
+      border-top: 1px solid #222;
+    }
+  }
 }
 
 /* BREADCRUMBS */
 
 .breadcrumb {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	gap: 0.8rem;
-	height: 6.4rem;
-	.breadcrumb-item {
-		@include typographyByName(botao-20);
-		a {
-			display: inline-block;
-			color: $cinza-contorno;
-		}
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  height: 6.4rem;
+  .breadcrumb-item {
+    @include typographyByName(botao-20);
+    a {
+      display: inline-block;
+      color: $cinza-contorno;
+    }
 
-		&.active {
-			a {
-				color: $preto;
-			}
-		}
-	}
+    &.active {
+      a {
+        color: $preto;
+      }
+    }
+  }
 
-	.breadcrumb-icon {
-		font-size: 1.6rem;
-		margin-bottom: -0.3rem;
-	}
+  .breadcrumb-icon {
+    font-size: 1.6rem;
+    margin-bottom: -0.3rem;
+  }
 }
 
 /* CARDS */
 
 .s-partner-why__card {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 2rem;
-	gap: 1.2rem;
-	width: 31.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 1.2rem;
+  width: 31.2rem;
 
-	@include respond-to(small) {
-		width: 100%;
-	}
+  @include respond-to(small) {
+    width: 100%;
+  }
 
-	.card-icon {
-		width: 4rem;
-		height: 4rem;
-		font-size: 4rem;
-	}
-	.card-title {
-		@include typographyByName(cabecalho-40);
-		text-align: center;
-	}
+  .card-icon {
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+  }
+  .card-title {
+    @include typographyByName(cabecalho-40);
+    text-align: center;
+  }
 
-	.card-description {
-		@include typographyByName(paragrafo-20);
-		text-align: center;
-	}
+  .card-description {
+    @include typographyByName(paragrafo-20);
+    text-align: center;
+  }
 }
 
 .s-plan-why__card {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 2rem;
-	gap: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 1.2rem;
 
-	width: 100%;
+  width: 100%;
 
-	@include respond-to(small) {
-		width: 100%;
-	}
+  @include respond-to(small) {
+    width: 100%;
+  }
 
-	.card-icon {
-		width: 4rem;
-		height: 4rem;
-		font-size: 4rem;
-	}
-	.card-title {
-		@include typographyByName(cabecalho-40);
-		text-align: center;
-	}
+  .card-icon {
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+  }
+  .card-title {
+    @include typographyByName(cabecalho-40);
+    text-align: center;
+  }
 
-	.card-description {
-		@include typographyByName(paragrafo-20);
-		text-align: center;
-	}
+  .card-description {
+    @include typographyByName(paragrafo-20);
+    text-align: center;
+  }
 }
 
 .card-plan {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-	gap: 2rem;
+  gap: 2rem;
 
-	padding: 2.4rem 1.2rem;
-	background: $branco-gelo;
+  padding: 2.4rem 1.2rem;
+  background: $branco-gelo;
 
-	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-	border-radius: 4px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
 
-	.card-plan__title {
-		@include typographyByName(cabecalho-30);
-		font-weight: 600 !important;
-	}
+  .card-plan__title {
+    @include typographyByName(cabecalho-30);
+    font-weight: 600 !important;
+  }
 
-	.card-plan__first-tag {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 0.8rem;
-		gap: 0.4rem;
-		width: 17.7rem;
-		height: 3.2rem;
-		background: $laranja-4-claro;
-		border-radius: 3.2rem;
-		color: $laranja-3;
-		@include typographyByName(botao-20);
-	}
+  .card-plan__first-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    gap: 0.4rem;
+    width: 17.7rem;
+    height: 3.2rem;
+    background: $laranja-4-claro;
+    border-radius: 3.2rem;
+    color: $laranja-3;
+    @include typographyByName(botao-20);
+  }
 
-	.card-plan__description {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		gap: 0.4rem;
-		align-items: center;
-		justify-content: center;
-		.description__icon {
-			font-size: 4rem;
-		}
+  .card-plan__description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+    .description__icon {
+      font-size: 4rem;
+    }
 
-		.description__velocity {
-			@include typographyByName(cabecalho-40);
-		}
+    .description__velocity {
+      @include typographyByName(cabecalho-40);
+    }
 
-		.description__type {
-			@include typographyByName(linha-10);
-		}
-	}
+    .description__type {
+      @include typographyByName(linha-10);
+    }
+  }
 
-	.card-plan__price {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		gap: 0.4rem;
-		align-items: center;
-		justify-content: center;
+  .card-plan__price {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
 
-		.price__value {
-			@include typographyByName(cabecalho-60);
-		}
+    .price__value {
+      @include typographyByName(cabecalho-60);
+    }
 
-		.price__prefix {
-			@include typographyByName(linha-20);
-		}
+    .price__prefix {
+      @include typographyByName(linha-20);
+    }
 
-		.price__recurrence {
-			@include typographyByName(linha-10);
-		}
-	}
+    .price__recurrence {
+      @include typographyByName(linha-10);
+    }
+  }
 
-	.card-plan__settings {
-		max-width: 100%;
-		display: flex;
-		gap: 0.8rem;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: center;
-		.settings__item {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			padding: 0.8rem;
-			gap: 0.4rem;
-			box-sizing: border-box;
+  .card-plan__settings {
+    max-width: 100%;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .settings__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.8rem;
+      gap: 0.4rem;
+      box-sizing: border-box;
 
-			border: 1px solid $laranja-0;
-			border-radius: 3.2rem;
+      border: 1px solid $laranja-0;
+      border-radius: 3.2rem;
 
-			flex: none;
-			order: 0;
-			flex-grow: 0;
-			@include typographyByName(botao-20);
-			color: $laranja-0;
-			.settings__icon {
-				font-size: 2.4rem;
-			}
-		}
-	}
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+      @include typographyByName(botao-20);
+      color: $laranja-0;
+      .settings__icon {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  .card-plan__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+
+    .modal-content {
+      background-color: $laranja-0;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 500px;
+      position: relative;
+      color: #fff;
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 2.4rem;
+        cursor: pointer;
+      }
+
+      .modal__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+
+        .modal__item {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          align-items: center;
+          justify-content: center;
+          .item__title,
+          .subitem__title {
+            text-align: center;
+            @include typographyByName(cabecalho-20);
+            color: #fff;
+          }
+
+          .subitem {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
+          }
+
+          .item__description,
+          .subitem__description {
+            @include typographyByName(linha-20);
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    &.show {
+      display: flex;
+    }
+  }
 }

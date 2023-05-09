@@ -434,6 +434,80 @@ a:visited {
 .card-plan .card-plan__settings .settings__item .settings__icon {
   font-size: 2.4rem;
 }
+.card-plan .card-plan__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+.card-plan .card-plan__modal .modal-content {
+  background-color: #ff6514;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  color: #fff;
+}
+.card-plan .card-plan__modal .modal-content .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+.card-plan .card-plan__modal .modal-content .modal__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.card-plan .card-plan__modal .modal-content .modal__list .modal__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.card-plan .card-plan__modal .modal-content .modal__list .modal__item .item__title,
+.card-plan .card-plan__modal .modal-content .modal__list .modal__item .subitem__title {
+  text-align: center;
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+  color: #fff;
+}
+.card-plan .card-plan__modal .modal-content .modal__list .modal__item .subitem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.card-plan .card-plan__modal .modal-content .modal__list .modal__item .item__description,
+.card-plan .card-plan__modal .modal-content .modal__list .modal__item .subitem__description {
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+  color: #fff;
+}
+.card-plan .card-plan__modal.show {
+  display: flex;
+}
 
 header {
   height: 9rem;
@@ -2320,9 +2394,6 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
   /* color: $color; */
 }
 
-.s-plans-cta {
-  overflow-x: hidden;
-}
 .s-plans-cta .container {
   display: flex;
   align-items: center;
@@ -2335,10 +2406,20 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
     padding: 2.4rem 1.6rem;
   }
 }
+@media (min-width: 415px) and (max-width: 959px) {
+  .s-plans-cta .container {
+    padding: 2.4rem 1.6rem;
+  }
+}
 .s-plans-cta .container.hughesnet {
   background-color: #0091c4;
 }
 @media (max-width: 414px) {
+  .s-plans-cta .container .s-plans-cta__logo {
+    max-width: 12rem;
+  }
+}
+@media (min-width: 415px) and (max-width: 959px) {
   .s-plans-cta .container .s-plans-cta__logo {
     max-width: 12rem;
   }
@@ -2389,6 +2470,20 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
 .s-plans-by-city {
   padding: 6.4rem 0;
 }
+@media (min-width: 415px) and (max-width: 959px) {
+  .s-plans-by-city {
+    padding: 3.2rem 0;
+  }
+}
+@media (min-width: 415px) and (max-width: 959px) {
+  .s-plans-by-city {
+    padding: 1.6rem 0;
+  }
+}
+.s-plans-by-city .container {
+  overflow-x: hidden;
+  padding: 1.6rem;
+}
 .s-plans-by-city .container h2 {
   font-family: "Gantari";
   font-style: normal;
@@ -2421,6 +2516,18 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
   width: 100%;
   padding: 6.4rem 0;
 }
+@media (min-width: 415px) and (max-width: 959px) {
+  .s-plan-why {
+    margin: 3.2rem 0;
+    padding: 3.2rem 0;
+  }
+}
+@media (max-width: 414px) {
+  .s-plan-why {
+    margin: 3.2rem 0;
+    padding: 3.2rem 0;
+  }
+}
 .s-plan-why .container {
   display: flex;
   justify-content: center;
@@ -2450,7 +2557,7 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
 }
 @media (min-width: 415px) and (max-width: 959px) {
   .s-plan-why .container .s-plan-why__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 414px) {
