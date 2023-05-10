@@ -1786,12 +1786,27 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
   position: relative;
   background-color: #fff;
 }
+@media (max-width: 414px) {
+  .modal-stepper-container .step-content {
+    width: 96%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .modal-stepper-container .step-form {
   display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5.6rem;
+}
+@media (max-width: 414px) {
+  .modal-stepper-container .step-form {
+    gap: 1.4rem;
+    max-width: 100%;
+  }
 }
 .modal-stepper-container .step-form #close-indicador-modal {
   position: absolute;
@@ -1857,6 +1872,11 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 414px) {
+  .modal-stepper-container .step-form .step-form__grid {
+    gap: 1.6rem;
+  }
+}
 .modal-stepper-container .step-form .step-form__grid .step-button-btn {
   cursor: pointer;
   display: flex;
@@ -1891,6 +1911,12 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
   align-items: center;
   gap: 2.4rem;
 }
+@media (max-width: 414px) {
+  .modal-stepper-container .step-form .step-form__grid .step-input__group {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+}
 .modal-stepper-container .step-form .step-form__grid .step-input__group input {
   width: 100%;
   padding: 2rem 1.6rem;
@@ -1912,7 +1938,7 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
 }
 @media (max-width: 414px) {
   .modal-stepper-container .step-form .step-form__grid .step-input__group input {
-    padding: 1.6rem;
+    padding: 1.2rem;
     width: 100%;
   }
 }
@@ -1927,10 +1953,31 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
   align-items: center;
   gap: 1.6rem;
 }
+@media (max-width: 414px) {
+  .modal-stepper-container .step-form .step-form__grid .step-form__group .step-form__buttons {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+}
 .modal-stepper-container .step-form .step-indicators-buttons {
   display: flex;
   gap: 0.8rem;
   align-items: center;
+}
+.modal-stepper-container .step-form .step-indicators-buttons .previous-button {
+  height: 4rem;
+  order: 3;
+}
+.modal-stepper-container .step-form .step-indicators-buttons .next-button {
+  order: 1;
+  height: 4rem;
+}
+@media (max-width: 414px) {
+  .modal-stepper-container .step-form .step-indicators-buttons {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+  }
 }
 .modal-stepper-container .step-form .step-indicators-buttons .step-indicators {
   display: flex;
@@ -1944,6 +1991,12 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
 }
 .modal-stepper-container .step-form .step-indicators-buttons .step-indicators .step.active {
   background: #ff6514;
+}
+@media (max-width: 414px) {
+  .modal-stepper-container .step-form .step-indicators-buttons .step-indicators .step {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
 }
 
 @media (max-width: 414px) {
