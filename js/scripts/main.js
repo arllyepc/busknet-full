@@ -342,8 +342,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	// Adicionar manipuladores de eventos para abrir e fechar o modal
-	openModalButton.addEventListener('click', openModal);
 
+	if (openModalButton) {
+		openModalButton.addEventListener('click', openModal);
+	}
 	function updateSteps(step) {
 		stepForms.forEach((form, index) => {
 			form.classList.toggle('active', index === step - 1);
@@ -391,3 +393,33 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 });
+
+//Parceiros
+
+const btnOpenModalPartners = document.querySelectorAll('.open-modal-partners');
+const btnCloseModalPartners = document.querySelectorAll(
+	'.close-modal-partners'
+);
+if (btnOpenModalPartners.length > 0) {
+	btnOpenModalPartners.forEach((button) => {
+		button.addEventListener('click', (event) => {
+			const targetModalId = document.querySelector('#modal-partner');
+
+			if (targetModalId) {
+				targetModalId.style.display = 'flex';
+			}
+		});
+	});
+}
+
+if (btnCloseModalPartners.length > 0) {
+	btnCloseModalPartners.forEach((button) => {
+		button.addEventListener('click', (event) => {
+			const targetModalId = document.querySelector('#modal-partner');
+
+			if (targetModalId) {
+				targetModalId.style.display = 'none';
+			}
+		});
+	});
+}

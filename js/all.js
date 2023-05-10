@@ -320,7 +320,9 @@ document.addEventListener('DOMContentLoaded', function () {
   } // Adicionar manipuladores de eventos para abrir e fechar o modal
 
 
-  openModalButton.addEventListener('click', openModal);
+  if (openModalButton) {
+    openModalButton.addEventListener('click', openModal);
+  }
 
   function updateSteps(step) {
     stepForms.forEach(function (form, index) {
@@ -364,4 +366,31 @@ document.addEventListener('DOMContentLoaded', function () {
       updateSteps(currentStep + 2);
     });
   });
-});
+}); //Parceiros
+
+var btnOpenModalPartners = document.querySelectorAll('.open-modal-partners');
+var btnCloseModalPartners = document.querySelectorAll('.close-modal-partners');
+
+if (btnOpenModalPartners.length > 0) {
+  btnOpenModalPartners.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      var targetModalId = document.querySelector('#modal-partner');
+
+      if (targetModalId) {
+        targetModalId.style.display = 'flex';
+      }
+    });
+  });
+}
+
+if (btnCloseModalPartners.length > 0) {
+  btnCloseModalPartners.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      var targetModalId = document.querySelector('#modal-partner');
+
+      if (targetModalId) {
+        targetModalId.style.display = 'none';
+      }
+    });
+  });
+}

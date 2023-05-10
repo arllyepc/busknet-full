@@ -2126,6 +2126,186 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
   }
 }
 
+.modal-partner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+.modal-partner .modal-partner__content {
+  max-width: 100rem;
+  padding: 2.4rem;
+  background-color: #fff;
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  align-items: center;
+  position: relative;
+  border: 4px solid #ff6514;
+}
+@media (max-width: 414px) {
+  .modal-partner .modal-partner__content {
+    gap: 1.6rem;
+    padding: 1.6rem;
+  }
+}
+.modal-partner .modal-partner__content .iconify-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #000;
+  font-size: 3.2rem;
+}
+.modal-partner .modal-partner__content .modal-partner__content__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.6rem;
+  text-align: center;
+}
+@media (max-width: 414px) {
+  .modal-partner .modal-partner__content .modal-partner__content__header {
+    gap: 1.2rem;
+  }
+}
+.modal-partner .modal-partner__content .modal-partner__content__header h2 {
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+}
+@media (max-width: 414px) {
+  .modal-partner .modal-partner__content .modal-partner__content__header h2 {
+    font-family: "Gantari";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: -0.02em;
+    /* color: $color; */
+  }
+}
+.modal-partner .modal-partner__content .modal-partner__content__header p {
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+}
+@media (max-width: 414px) {
+  .modal-partner .modal-partner__content .modal-partner__content__header p {
+    font-family: "Gantari";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    /* color: $color; */
+  }
+}
+.modal-partner .modal-partner__content .modal-partner__content__body form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.6rem;
+  text-align: center;
+  max-width: 48rem;
+}
+@media (max-width: 414px) {
+  .modal-partner .modal-partner__content .modal-partner__content__body form {
+    max-width: 100%;
+    gap: 0.8rem;
+  }
+}
+.modal-partner .modal-partner__content .modal-partner__content__body form input {
+  width: 100%;
+  padding: 1.6rem 1.6rem;
+  border: 1px solid #222121;
+  border-radius: 0.5rem;
+  outline: none;
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+}
+@media (min-width: 415px) and (max-width: 959px) {
+  .modal-partner .modal-partner__content .modal-partner__content__body form input {
+    padding: 1.6rem;
+  }
+}
+@media (max-width: 414px) {
+  .modal-partner .modal-partner__content .modal-partner__content__body form input {
+    padding: 1rem;
+    width: 100%;
+  }
+}
+.modal-partner .modal-partner__content .modal-partner__content__body form .input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+.modal-partner .modal-partner__content .modal-partner__content__body form .input-group p {
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+}
+@media (max-width: 414px) {
+  .modal-partner .modal-partner__content .modal-partner__content__body form .input-group p {
+    font-family: "Gantari";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    letter-spacing: -0.02em;
+    /* color: $color; */
+  }
+}
+.modal-partner .modal-partner__content .modal-partner__content__body form .input-group label {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+}
+.modal-partner .modal-partner__content .modal-partner__content__body form .buttons-group {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 100%;
+}
+.modal-partner .modal-partner__content .modal-partner__content__body form .buttons-group .primary {
+  width: 100%;
+  height: 4.8rem;
+}
+
 .s-about-intro {
   margin: 6.4rem 0;
 }
