@@ -193,6 +193,63 @@
 							</div>
 						</div>
 					</div>
+
+					<div class="s-search-results__filter-price-mobile">
+						<h3>
+							Resultados para internet em
+							<span class="filter-price__city">Catalão</span> em
+							<span class="filter-price__state">Goiás</span>
+						</h3>
+						<div class="filter-price__results-filter-price">
+							<button
+								class="results-filter-price__btn"
+								id="open-filters-mobile"
+							>
+								Filtros
+							</button>
+							<button class="results-filter-price__btn" id="open-prices-mobile">
+								Menor preço
+							</button>
+							<div class="results-filter-price__others-mobile" id="scrollable-content-prices">
+								<h3>Ordenar por</h3>
+								<div class="overlay-button-mobile">
+									<button class="btn primary" id="apply-filters-price">
+										Aplicar filtros
+										<iconify-icon
+											icon="ic:round-filter-alt"
+											class="icon"
+										></iconify-icon>
+									</button>
+								</div>
+
+								<button
+									class="s-search-results__close-btn-mobile"
+									id="close-filters-price"
+								>
+									<iconify-icon
+										icon="ic:round-close"
+										class="icon"
+									></iconify-icon>
+								</button>
+								<div class="others-group-price">
+									<button class="others-group__btn" id="price-lowest">
+										Menor preço
+									</button>
+									<button class="others-group__btn" id="price-highest">
+										Maior preço
+									</button>
+								</div>
+								<div class="others-group-velocity">
+									<button class="others-group__btn" id="price-lowest">
+										Menor velocidade
+									</button>
+									<button class="others-group__btn" id="price-highest">
+										Maior velocidade
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -212,7 +269,7 @@
 						<button class="s-search-results__close-btn">
 							<iconify-icon icon="ic:round-close" class="icon"></iconify-icon>
 						</button>
-						<ul class="aside-groups">
+						<ul class="aside-groups scrollable-content" id="scrollable-content">
 							<li class="aside-group">
 								<p class="aside-group__title">Velocidade da internet</p>
 								<ul class="aside-group__filters">

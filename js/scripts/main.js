@@ -249,6 +249,96 @@ filterItems.forEach((item) => {
 	});
 });
 
+/* Ativação de filtros de busca e preços na versão responsiva */
+
+const btnFilterSearch = document.querySelector('#open-filters-mobile');
+
+if (btnFilterSearch) {
+	btnFilterSearch.addEventListener('click', () => {
+		const aside = document.querySelector('.s-search-results__aside');
+
+		aside.classList.toggle('mobile');
+		aside.classList.toggle('active');
+		const closeFilterBtn = document.querySelector(
+			'.s-search-results__close-btn'
+		);
+
+		const applyFilterBtn = document.querySelector('#apply-filters');
+
+		applyFilterBtn.addEventListener('click', () => {
+			aside.classList.remove('mobile');
+			aside.classList.remove('active');
+		});
+
+		closeFilterBtn.addEventListener('click', () => {
+			aside.classList.remove('mobile');
+			aside.classList.remove('active');
+		});
+	});
+}
+
+const btnFilterPriceMobile = document.querySelector('#open-prices-mobile');
+
+if (btnFilterPriceMobile) {
+	btnFilterPriceMobile.addEventListener('click', () => {
+		const asidePricesMobile = document.querySelector(
+			'.results-filter-price__others-mobile'
+		);
+
+		asidePricesMobile.classList.toggle('mobile');
+		asidePricesMobile.classList.toggle('active');
+		const closeFilterBtn = document.querySelector('#close-filters-price');
+
+		const applyFilterBtn = document.querySelector('#apply-filters-price');
+
+		applyFilterBtn.addEventListener('click', () => {
+			asidePricesMobile.classList.remove('mobile');
+			asidePricesMobile.classList.remove('active');
+		});
+
+		closeFilterBtn.addEventListener('click', () => {
+			asidePricesMobile.classList.remove('mobile');
+			asidePricesMobile.classList.remove('active');
+		});
+	});
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+	const scrollableContentPrices = document.getElementById(
+		'scrollable-content-prices'
+	);
+
+	if (scrollableContentPrices) {
+		scrollableContentPrices.addEventListener('scroll', function (e) {
+			if (
+				scrollableContentPrices.scrollTop + scrollableContent.clientHeight >=
+				scrollableContentPrices.scrollHeight
+			) {
+				document.body.style.overflow = 'hidden';
+			} else {
+				document.body.style.overflow = '';
+			}
+		});
+	}
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+	const scrollableContent = document.getElementById('scrollable-content');
+
+	if (scrollableContent) {
+		scrollableContent.addEventListener('scroll', function (e) {
+			if (
+				scrollableContent.scrollTop + scrollableContent.clientHeight >=
+				scrollableContent.scrollHeight
+			) {
+				document.body.style.overflow = 'hidden';
+			} else {
+				document.body.style.overflow = '';
+			}
+		});
+	}
+});
+
 let btnSearch = document.querySelector('#btn-search-plans');
 let modalSearch = document.querySelector('#modal-searching-plan');
 
